@@ -1,26 +1,122 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+/* Colombian Musical Heritage Design System
+Inspired by traditional Colombian colors and the warmth of trombone brass
+All colors MUST be HSL.
+*/
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    /* Colombian-inspired color palette */
+    --background: 32 20% 95%;
+    --foreground: 30 8% 20%;
+
+    --card: 40 30% 98%;
+    --card-foreground: 30 8% 20%;
+
+    --popover: 40 30% 98%;
+    --popover-foreground: 30 8% 20%;
+
+    /* Golden brass trombone primary */
+    --primary: 45 85% 47%;
+    --primary-foreground: 30 8% 15%;
+
+    /* Colombian blue secondary */
+    --secondary: 214 100% 30%;
+    --secondary-foreground: 40 30% 98%;
+
+    --muted: 35 15% 90%;
+    --muted-foreground: 30 8% 45%;
+
+    /* Colombian red accent */
+    --accent: 354 100% 45%;
+    --accent-foreground: 40 30% 98%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 35 15% 85%;
+    --input: 35 15% 92%;
+    --ring: 45 85% 47%;
+
+    --radius: 0.5rem;
+    
+    /* Colombian heritage gradients */
+    --gradient-sunset: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent)));
+    --gradient-mountain: linear-gradient(180deg, hsl(var(--secondary)), hsl(214 60% 50%));
+    --gradient-hero: linear-gradient(135deg, hsl(45 85% 47% / 0.95), hsl(354 100% 45% / 0.9));
+    
+    /* Musical animations */
+    --transition-musical: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-smooth: all 0.3s ease-out;
+    
+    /* Colombian green for accents */
+    --colombia-green: 140 100% 30%;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 30 25% 8%;
+    --foreground: 40 20% 90%;
+
+    --card: 30 20% 12%;
+    --card-foreground: 40 20% 90%;
+
+    --popover: 30 20% 12%;
+    --popover-foreground: 40 20% 90%;
+
+    --primary: 45 85% 55%;
+    --primary-foreground: 30 8% 15%;
+
+    --secondary: 214 80% 35%;
+    --secondary-foreground: 40 20% 90%;
+
+    --muted: 30 15% 20%;
+    --muted-foreground: 35 10% 65%;
+
+    --accent: 354 80% 50%;
+    --accent-foreground: 40 20% 90%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 30 15% 20%;
+    --input: 30 15% 20%;
+    --ring: 45 85% 55%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-playfair;
+  }
 }
