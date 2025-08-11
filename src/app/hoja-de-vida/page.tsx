@@ -1,48 +1,34 @@
-"use client"
-
-import { useEffect } from "react";
+import type { Metadata } from "next";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { ShowPDFButton } from "@/components/ShowPDFButton";
 
 const CV_UPDATED_PATH = "/assets/hoja-de-vida-actualizada.pdf";
 const CV_OLD_PATH = "/assets/hoja-de-vida-anterior.pdf";
 
-const setMetaTag = (name: string, content: string) => {
-  let tag = document.querySelector(`meta[name="${name}"]`);
-  if (!tag) {
-    tag = document.createElement("meta");
-    tag.setAttribute("name", name);
-    document.head.appendChild(tag);
-  }
-  tag.setAttribute("content", content);
-};
-
-const setCanonical = (href: string) => {
-  let link = document.querySelector("link[rel=canonical]") as HTMLLinkElement | null;
-  if (!link) {
-    link = document.createElement("link");
-    link.setAttribute("rel", "canonical");
-    document.head.appendChild(link);
-  }
-  link.href = href;
+export const metadata: Metadata = {
+  title: "Hoja de Vida",
+  description: "Hoja de Vida: consulta la versión actualizada y la anterior en formato PDF.",
+  alternates: {
+    canonical: "/hoja-de-vida",
+  },
+  openGraph: {
+    title: "Hoja de Vida",
+    description: "Página para visualizar la Hoja de Vida (actualizada y anterior) en PDF.",
+    url: "/hoja-de-vida",
+    type: "article",
+  },
 };
 
 const HojaDeVida = () => {
-  useEffect(() => {
-    document.title = "Hoja de Vida | El Trombón en el Folclor Colombiano";
-    setMetaTag(
-      "description",
-      "Hoja de Vida: consulta la versión actualizada y la anterior en formato PDF."
-    );
-    setCanonical(`${window.location.origin}/hoja-de-vida`);
-  }, []);
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
+  const pageUrl = new URL("/hoja-de-vida", siteUrl).toString();
 
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'WebPage',
     name: 'Hoja de Vida',
     description: 'Página para visualizar la Hoja de Vida (actualizada y anterior) en PDF.',
-    url: `${window.location.origin}/hoja-de-vida`,
+    url: pageUrl,
   };
 
   return (
