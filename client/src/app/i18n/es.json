@@ -1,0 +1,478 @@
+{
+  "sidebar": {
+    "h2": "El Trombón en el",
+    "h3": " Folclor Colombiano",
+    "home": "Inicio",
+    "metodology": "Metodología",
+    "history": "Historia",
+    "cumbia": "Cumbia",
+    "currulao": "Currulao",
+    "pasillo": "Pasillo & Bambuco",
+    "joropo": "Joropo",
+    "work": "Obra",
+    "galery": "Galería",
+    "resume": "Hoja de Vida",
+    "resources": "Recursos",
+    "quote": "Destacar el aporte al repertorio del folclor colombiano",
+    "footer": "Proyecto de Grado Musical"
+  },
+  
+  "index": {
+    "heroSection": {
+      "title1": "El Trombón en el",
+      "title2": " Folclor Colombiano",
+      "description": "Destacar el aporte al repertorio del folclor colombiano",
+      "rhythmsButton": "Explorar Ritmos",
+      "sampleButton": "Explorar Muestra"
+    },
+
+    "timelineSection": {
+      "title": "Historia del Trombón en Colombia",
+      "description": "Un recorrido por los momentos clave que definieron la presencia del trombón en nuestra música tradicional",
+      "events": {
+        "colonial": {
+          "period": "Época Colonial",
+          "title": "Influencias Europeas",
+          "description": "Llegada de instrumentos de viento europeos y primeras adaptaciones en el territorio colombiano. Los conquistadores traen tradiciones musicales que se mezclan con las indígenas."
+        },
+        "bandas": {
+          "period": "Siglo XIX",
+          "title": "Ritmos Tradicionales",
+          "description": "Empiezan a proliferar los ritmos como la cumbia y currulao en la costa atlántica y pacífica, el bambuco y pasillo en la región andina, y el joropo en la Orinoquía."
+        },
+        "clasico": {
+          "period": "Siglo XX Temprano",
+          "title": "Aportes Clásicos",
+          "description": "El trombón gana protagonismo en la música clásica y contemporánea: Beethoven, Berlioz y Britten lo utilizan de manera expresiva en sus obras."
+        },
+        "folclorico": {
+          "period": "Siglo XX-XXI",
+          "title": "Integración Folclórica",
+          "description": "En Colombia, aunque el trombón no es tradicionalmente protagonista en los ritmos patrimoniales, ha comenzado a tener mayor presencia en agrupaciones modernas, bandas sinfónicas y fusiones contemporáneas."
+        }
+      }
+    },
+
+    "rhythmsSection": {
+      "title": "Ritmos y Regiones",
+      "description": "Explora cómo el trombón se ha integrado en los diferentes géneros musicales tradicionales de Colombia",
+      "rhythms": {
+        "cumbia": {
+          "title": "Cumbia",
+          "region": "Costa Atlántica",
+          "description": "Ritmo emblemático de la región atlántica, que nació fusionando elementos africanos, indígenas y españoles. El trombón aporta profundidad y carácter a esta expresión musical.",
+          "href": "/cumbia"
+        },
+        "currulao": {
+          "title": "Currulao",
+          "region": "Costa Pacífica",
+          "description": "Expresión musical del litoral pacífico que combina ancestralidad africana con la sonoridad del trombón, creando un diálogo único entre tradición y modernidad.",
+          "href": "/currulao"
+        },
+        "pasillo": {
+          "title": "Pasillo y Bambuco",
+          "region": "Región Andina",
+          "description": "Géneros representativos de la región andina colombiana donde el trombón ha encontrado un espacio especial para expresar la melancolía y alegría de nuestra montaña.",
+          "href": "/pasillo"
+        },
+        "joropo": {
+          "title": "Joropo",
+          "region": "Orinoquía",
+          "description": "Música llanera que con la incorporación del trombón ha ganado nuevas dimensiones sonoras, manteniendo la esencia del trabajo y la vida en los llanos orientales.",
+          "href": "/joropo"
+        }
+      }
+    },
+
+    "methodologySection": {
+      "title": "Elaboración de la Obra",
+      "description1": "Una suite en tres movimientos que representa el viaje musical del trombón en Colombia:",
+      "description2": " Confusión, Conciencia y Renacer",
+      "movements": {
+        "confusion": {
+          "title": "Confusión",
+          "description": "La búsqueda de identidad musical en un contexto globalizado"
+        },
+        "consciousness": {
+          "title": "Conciencia",
+          "description": "El descubrimiento de las raíces y tradiciones propias"
+        },
+        "rebirth": {
+          "title": "Renacer",
+          "description": "La síntesis creativa entre tradición y modernidad"
+        }
+      }
+    }
+  },
+
+  "metodology": {
+    "heroSection": {
+      "title": "Metodología de Investigación",
+      "description": "Diseño y enfoque del estudio sobre el trombón en el folclor colombiano"
+    },
+    "researchObjectives": {
+      "title": "Objetivos del Estudio",
+      "generalObjectives": {
+        "subtitle": "Objetivos Generales",
+        "items": [
+          {
+            "description": "Destacar el aporte del trombón al repertorio del folclor colombiano mediante la creación de una obra que será una corta suite para trombón y banda que se compone de tres movimientos contrastantes que son:",
+            "movements": [
+              "1 - Confusión (pasillo)",
+              "2 - Conciencia (cumbia)",
+              "3 - Renacer (currulao)"
+            ],
+            "conclusion": "Demostrando así la versatilidad y capacidad expresiva del instrumento en contextos musicales autóctonos."
+          },
+          {
+            "description": "A partir de un recorrido histórico y territorial se pretende dar cuenta del estado actual del folclor colombiano así como la evolución que lo llevo a mezclarse con prácticas tan complejas como las orquestales, teniendo como principal elemento, el trombón. A partir de ello se propone la composición de la suit como aporte al repertorio de ritmos colombianos representativos de cada región del país."
+          }
+        ]
+      },
+      "specificObjectives": {
+        "subtitle": "Objetivos Específicos",
+        "items": [
+          "Identificar el tipo de ritmo según las regiones colombianas.",
+          "Conocer el aporte del trombón en cada uno de ellos (ritmos).",
+          "Entender el porqué del poco protagonismo del trombón dentro de los ritmos identificados y escogidos.",
+          "Proponer una composición que aporte a cada uno de los ritmos a tratar siendo el trombón el claro protagonista."
+        ]
+      }
+    }
+  },
+
+  "history": {
+    "heroSection": {
+      "title": "Historia del Trombón en Colombia",
+      "description": "Un viaje desde Europa hasta el corazón del folclor colombiano"
+    },
+    "introduction": {
+      "title": "Introducción y Contexto"
+    },
+    "trombonColombia": {
+      "title": "El trombón dentro de las músicas colombianas"
+    },
+    "timeline": {
+      "title": "Línea de Tiempo Detallada"
+    }
+  },
+
+  "cumbia": {
+    "heroSection": {
+      "title": "Cumbia",
+      "description": "Costa Atlántica - El ritmo que conquistó el corazón de Colombia"
+    },
+    "historicalDescription": {
+      "title": "Historia y Contexto Cultural",
+      "content": "La cumbia, cuyo nombre proviene de la voz \"cumbancha\", es tal vez el ritmo más representativo e importante de la región Atlántica. Nacida de la fusión entre la cadencia africana, los sonidos monótonos indígenas y el carácter festivo de la costa, la cumbia es símbolo nacional reconocido incluso fuera de Colombia.",
+      "quote": "La cumbia con trombón representa la evolución natural de nuestras tradiciones, donde cada instrumento aporta su voz al coro ancestral de la Costa Atlántica."
+    },
+    "musicalCharacteristics": {
+      "title": "Características Musicales",
+      "mainTypes": {
+        "title": "Tipos Principales",
+        "items": [
+          "Cumbia moderna: además de los instrumentos tradicionales incluye el canto (contando historias de vivencias costeñas)",
+          "Cumbia clásica: caracterizada por la ausencia de voces y el protagonismo de los instrumentos, sobretodo de la guacharaca"
+        ]
+      },
+      "tromboneRole": {
+        "title": "Rol del Trombón",
+        "paragraphs": [
+          "El trombón encontró su lugar en la cumbia durante el siglo XX, cuando las bandas pelayeras comenzaron a incorporar instrumentos de viento metal para enriquecer la sonoridad tradicional. Su timbre grave y expresivo complementa perfectamente los patrones rítmicos ancestrales, aportando profundidad armónica y melódica al conjunto.",
+          "En la interpretación contemporánea de la cumbia, el trombón desempeña roles tanto melódicos como armónicos, dialogando con la gaita, el acordeón y la percusión para crear texturas sonoras únicas que mantienen la esencia folclórica mientras abrazan la modernidad instrumental."
+        ]
+      }
+    }
+  },
+
+  "currulao": {
+    "heroSection": {
+      "title": "Currulao",
+      "description": "Costa Pacífica - La ancestralidad africana en sonoridad moderna"
+    },
+    "historicalDescription": {
+      "title": "Historia y Contexto Cultural",
+      "paragraphs": [
+        "El origen de la palabra currulao está estrechamente relacionado a cunuano que se refiere al tipo de tambor llamado cununo, importante instrumento a la hora de hablar de ritmos de la región pacífica.",
+        "Es un ritmo bandera dentro de la población afro colombiana también influenciado por las comunidades negras esclavizadas en Latinoamérica, quienes traían consigo tradiciones de santería y ritos religiosos, es por ello que quienes lo interpretan como parte de su cultura le atribuyen propiedades ancestrales, es como una especie de ritual.",
+        "Se acompaña por una danza tradicional que lleva el mismo nombre (currulao)."
+      ],
+      "quote": "El currulao con trombón es el encuentro de dos mundos sonoros: la ancestralidad africana y la modernidad instrumental, creando nuevas formas de expresión cultural."
+    },
+    "musicalCharacteristics": {
+      "title": "Características del Currulao",
+      "traditionalInstrumentation": {
+        "title": "Instrumentación Tradicional",
+        "items": [
+          "Marimba indígena",
+          "Bombo (tambor grave)",
+          "Cununo (tambor agudo)",
+          "Guasá (idiófonos)",
+          "Voces (coro responsorial)"
+        ]
+      },
+      "variants": {
+        "title": "Variantes",
+        "description": "Al igual que la cumbia hay de dos tipos:",
+        "items": [
+          "La Juga",
+          "El Berejú"
+        ]
+      }
+    },
+    "tromboneContribution": {
+      "title": "Aporte del Trombón",
+      "content": "El currulao y la cumbia propios de las zonas costeras colombianas se caracterizaron por su rapidez e interesante combinación de percusiones con instrumentos de viento. Aunque en este caso el protagónico tampoco se lo lleva el trombón es un importante aporte para su posterior inclusión dentro de los ritmos tratados, pues su unión a nuestra tradición se da o se abre por las zonas que se desarrollan a orillas del mar."
+    }
+  },
+
+  "pasillo": {
+    "heroSection": {
+      "title": "Pasillo y Bambuco",
+      "description": "Región Andina - La melancolía y alegría de nuestras montañas"
+    },
+    "historicalDescription": {
+      "title": "Historia y Contexto Cultural",
+      "pasillo": {
+        "title": "Pasillo",
+        "paragraphs": [
+          "El pasillo es uno de los ritmos nacionales más recientes, ya que surgió en la época independentista, en contraste con otros ritmos que se desarrollaron durante la colonia. Su base musical proviene del vals austriaco, mezclado con danzas criollas del interior de Colombia.",
+          "Inicialmente se interpretaba en salones, principalmente con piano, pero posteriormente se popularizó en sectores más humildes al incluir instrumentos como la guitarra, el tiple y la bandola. Esta transición le otorgó al pasillo un carácter más festivo y dinámico, convirtiéndolo en un ritmo rápido y técnico que representa desafíos tanto para músicos como bailarines."
+        ]
+      },
+      "bambuco": {
+        "title": "Bambuco",
+        "paragraphs": [
+          "El bambuco es considerado el ritmo más representativo de la región andina colombiana. A diferencia del pasillo, su ejecución suele estar a cargo de pequeñas agrupaciones (2 o 3 músicos) y se acompaña con instrumentos como la guitarra, el tiple, e incluso la flauta en algunas versiones.",
+          "Este ritmo, profundamente campesino, es el resultado de una rica mezcla racial, siendo uno de los emblemas del folclor nacional, aunque no tan conocido fuera del país. El sanjuanero, por ejemplo, es una derivación del bambuco. A lo largo de la historia, el bambuco ha tenido contacto con ritmos como la habanera cubana, lo que evidencia el diálogo entre culturas en su evolución."
+        ]
+      },
+      "quote": "En el pasillo y bambuco, el trombón canta las historias de nuestros pueblos, sus alegrías y nostalgias, sus fiestas y remembranzas."
+    },
+    "comparisonTable": {
+      "title": "Pasillo vs Bambuco",
+      "headers": {
+        "aspect": "Aspecto",
+        "pasillo": "Pasillo",
+        "bambuco": "Bambuco"
+      },
+      "rows": [
+        {
+          "aspect": "🏛️ Origen histórico",
+          "pasillo": "Surge en la época independentista, influenciado por el vals austriaco",
+          "bambuco": "De tradición más antigua, con raíces en la época colonial"
+        },
+        {
+          "aspect": "🌍 Región asociada",
+          "pasillo": "Interior de Colombia (zona andina)",
+          "bambuco": "Región andina colombiana"
+        },
+        {
+          "aspect": "🎭 Influencias",
+          "pasillo": "Mezcla de vals europeo y danzas criollas",
+          "bambuco": "Fusión de tradiciones indígenas, africanas y españolas"
+        },
+        {
+          "aspect": "🎵 Instrumentación inicial",
+          "pasillo": "Piano (en salones), luego guitarra, tiple, bandola",
+          "bambuco": "Guitarra, tiple, flauta; en agrupaciones pequeñas (2 o 3 músicos)"
+        },
+        {
+          "aspect": "🎶 Carácter musical",
+          "pasillo": "Rápido y técnico, dificultad para bailarines y músicos",
+          "bambuco": "Más campesino y vocal, asociado a canto e identidad regional"
+        },
+        {
+          "aspect": "📈 Evolución cultural",
+          "pasillo": "Se mezcló con el bambuco, adoptando un carácter más festivo",
+          "bambuco": "Generó variantes como el sanjuanero; menos conocido internacionalmente"
+        },
+        {
+          "aspect": "🎓 Proyección académica",
+          "pasillo": "Compositores como Pedro Morales Pino lo promovieron como música nacional",
+          "bambuco": "Ha sido símbolo del interior colombiano, pero con menor difusión externa"
+        },
+        {
+          "aspect": "🎺 Presencia del trombón",
+          "pasillo": "Escasa en su origen; actualmente se busca reivindicarlo en arreglos sinfónicos",
+          "bambuco": "Tradicionalmente excluido, pero con potencial en nuevos formatos orquestales"
+        }
+      ]
+    },
+    "tromboneContribution": {
+      "title": "Aporte del Trombón",
+      "pasillo": {
+        "title": "Trombón en el Pasillo",
+        "items": [
+          "Participación histórica: No formaba parte de las agrupaciones originales. El pasillo se tocaba principalmente con piano, guitarra, tiple y bandola.",
+          "Protagonismo actual: En esta tesis presentamos el movimiento \"Confusión (Pasillo)\", en la que proponemos al trombón como instrumento central.",
+          "Desafío técnico: Se busca una línea melódica lírica y explosiva que permita al trombón destacarse sin opacar la banda sinfónica.",
+          "Razón de inclusión: Reivindicar el trombón como parte del repertorio nacional mediante una reinterpretación del pasillo fiestero en formato sinfónico."
+        ]
+      },
+      "bambuco": {
+        "title": "Trombón en el Bambuco",
+        "items": [
+          "Desafío estético: Integrarlo implica equilibrar la potencia del trombón con la esencia melódica del bambuco.",
+          "Adaptación sinfónica: La banda sinfónica permite una expansión instrumental donde el trombón puede jugar un papel protagónico.",
+          "Justificación cultural: Los movimientos de internacionalización y contacto con músicas del Caribe, México y Suramérica abrieron camino a instrumentos de viento.",
+          "Propuesta compositiva: Se plantea el trombón como instrumento lírico que dialoga con la orquesta, inspirado en el concerto grosso.",
+          "Impacto expresivo: El trombón puede aportar emotividad, dinamismo y profundidad al repertorio andino colombiano, sin sacrificar identidad."
+        ]
+      }
+    }
+  },
+
+  "joropo": {
+    "heroSection": {
+      "title": "Joropo",
+      "description": "Orinoquía - El espíritu del llano en nuevas dimensiones sonoras"
+    },
+    "historicalDescription": {
+      "title": "Historia y Contexto Cultural",
+      "paragraphs": [
+        "Este tipo musical se desarrolló durante la colonia con tradiciones hispano criollas con leves influencias africanas, es de ritmo rápido también con un poco de mezcla con el vals, su canto es llamado copla, sus instrumentos protagónicos son el arpa, el cuatro y un tipo de maraca llamada capacho.",
+        "En este tipo de música se realizan enfrentamientos musicales donde predomina el canto, estas competencias son denominadas contrapunteo. En la Orinoquia la voz joropo es significado de baile y fiesta.",
+        "La danza del joropo es vigorosa y exigente. Suele ejecutarse en pareja, con pasos cortos y rápidos que imitan el trote de los caballos, simbolizando así el vínculo entre el campesino y la naturaleza. En muchas versiones, los bailarines también realizan zapateos enérgicos que refuerzan el carácter festivo y tribal del ritmo."
+      ],
+      "quote": "El joropo con trombón es como el viento que cruza los llanos: mantiene su fuerza ancestral pero abraza nuevos horizontes sonoros."
+    },
+    "musicalCharacteristics": {
+      "title": "Características Musicales",
+      "items": [
+        "Ritmo rápido y sincopado, con fuerte presencia del 3/4 y 6/8 en la métrica musical.",
+        "Copla improvisada como forma de expresión lírica.",
+        "Contrapunteo vocal entre intérpretes, que demuestra ingenio y dominio de la tradición oral.",
+        "Danza zapateada con gran fuerza rítmica, ejecutada en pareja.",
+        "Carácter festivo, alegre y combativo, asociado a la vida rural y las celebraciones comunitarias.",
+        "Contenido narrativo en las letras, que hablan del paisaje, el ganado, el amor y el orgullo regional."
+      ]
+    },
+    "aboutJoropo": {
+      "title": "Acerca del Joropo",
+      "instrumentation": {
+        "title": "Instrumentación",
+        "items": [
+          "Arpa llanera o bandola",
+          "Cuatro llanero",
+          "Maracas (del tipo capacho)"
+        ]
+      },
+      "variants": {
+        "title": "Variantes",
+        "items": [
+          "Joropo Llanero",
+          "Joropo Central"
+        ]
+      }
+    },
+    "tromboneContribution": {
+      "title": "Aporte del Trombón",
+      "items": [
+        "Ausencia histórica: En sus raíces campesinas, el trombón no estuvo presente en el joropo tradicional. La instrumentación se limitaba a arpa, cuatro y maracas.",
+        "Limitaciones técnicas: El formato original no ofrecía espacios ni arreglos para instrumentos de viento-metal por su naturaleza acústica e íntima.",
+        "Potencial contemporáneo: En la actualidad, el trombón puede incorporarse en arreglos sinfónicos y bandas llaneras modernas para enriquecer la sonoridad del joropo.",
+        "Aporte expresivo: Su capacidad para producir líneas líricas y explosivas lo convierte en un excelente vehículo de dramatismo melódico dentro de obras con base joropera.",
+        "Propuesta sinfónica: Se plantea la inclusión del trombón en composiciones como parte de la reinterpretación de este ritmo en clave orquestal, manteniendo el espíritu festivo pero ampliando el color instrumental.",
+        "Diálogo instrumental: El trombón puede entablar contrapuntos con el arpa y el cuatro, imitando el contrapunteo vocal, lo que permite enriquecer los juegos tímbricos en una banda sinfónica."
+      ]
+    }
+  },
+
+  "work": {
+    "heroSection": {
+      "title": "La Obra Musical",
+      "description": "Suite para trombón y banda: Confusión, Conciencia y Renacer"
+    },
+    "suiteStructure": {
+      "title": "Estructura de la Suite: Tres Movimientos"
+    },
+    "movements": {
+      "confusion": {
+        "number": "I",
+        "title": "Confusión",
+        "description": "Primer movimiento que explora la búsqueda de identidad sonora entre tradición y modernidad en el pasillo colombiano.",
+        "audioTitle": "Movimiento I - Confusión",
+        "audioDescription": "Pasillo para trombón y banda",
+        "pdfTitle": "Partitura: Movimiento I - Confusión",
+        "scoreButton": "Ver partitura (PDF)"
+      },
+      "consciousness": {
+        "number": "II",
+        "title": "Conciencia",
+        "description": "Segundo movimiento que representa el despertar y la claridad en la fusión de elementos musicales diversos.",
+        "audioTitle": "Movimiento II - Conciencia",
+        "audioDescription": "Cumbia para trombón y banda",
+        "pdfTitle": "Partitura: Movimiento II - Conciencia",
+        "scoreButton": "Ver partitura (PDF)"
+      },
+      "rebirth": {
+        "number": "III",
+        "title": "Renacer",
+        "description": "Movimiento final que simboliza la renovación y transformación del folclor tradicional hacia nuevas expresiones.",
+        "audioTitle": "Movimiento III - Renacer",
+        "audioDescription": "Currulao para trombón y banda",
+        "pdfTitle": "Partitura: Movimiento III - Renacer",
+        "scoreButton": "Ver partitura (PDF)"
+      }
+    }
+  },
+
+  "hojaDeVida": {
+    "title": "Hoja de Vida",
+    "description": "Aquí podés consultar y descargar la Hoja de Vida en sus dos versiones: la versión actualizada y la versión anterior. Abrí el visor para leerlas en pantalla o usá los enlaces de descarga.",
+    "updated": {
+      "title": "Hoja de Vida – Versión Actualizada",
+      "description": "Documento PDF con la información profesional más reciente."
+    },
+    "previous": {
+      "title": "Hoja de Vida – Versión Anterior",
+      "description": "Documento PDF con la versión previa del currículum."
+    },
+    "actions": {
+      "viewCV": "Ver hoja de vida (PDF)",
+      "openInNewTab": "Abrir en nueva pestaña",
+      "openUpdatedCV": "Abrir Hoja de Vida actualizada en una nueva pestaña",
+      "openPreviousCV": "Abrir Hoja de Vida anterior en una nueva pestaña"
+    }
+  },
+
+  "resources": {
+    "heroSection": {
+      "title": "Recursos y Referencias",
+      "description": "Bibliografía, fuentes y recursos utilizados en la investigación"
+    },
+    "bibliographicReferences": {
+      "title": "Referencias Bibliográficas",
+      "icon": "FileText"
+    },
+    "bibliography": {
+      "title": "Bibliografía",
+      "icon": "BookOpen"
+    },
+    "summary": {
+      "title": "Resumen de Fuentes",
+      "totalSources": "Total de fuentes",
+      "books": "Libros",
+      "articles": "Artículos",
+      "webResources": "Recursos web"
+    },
+    "note": {
+      "title": "Nota sobre las Referencias",
+      "content": "Esta bibliografía representa una selección de las fuentes más relevantes utilizadas en la investigación sobre el trombón en la música tradicional colombiana. Las referencias incluyen tanto fuentes académicas como recursos digitales que han sido fundamentales para el desarrollo de este proyecto. Para acceder a los textos completos o solicitar información adicional, puede contactar al autor a través de los canales institucionales correspondientes."
+    },
+    "badges": {
+      "book": "Libro",
+      "article": "Artículo",
+      "journal": "Revista",
+      "thesis": "Tesis",
+      "web": "Web",
+      "reference": "Referencia"
+    },
+    "actions": {
+      "viewSource": "Ver fuente",
+      "openInNewTab": "Abrir en nueva pestaña"
+    }
+  }
+}

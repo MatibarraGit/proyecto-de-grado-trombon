@@ -17,7 +17,12 @@ type ShowPDFButtonType = {
   buttonText: string
 }
 
-export const ShowPDFButton = ({ title, filePath, hoverColorClassName, buttonText }: ShowPDFButtonType ) => {
+export const ShowPDFButton = ({ 
+  title, 
+  filePath,
+  hoverColorClassName, 
+  buttonText,
+}: ShowPDFButtonType ) => {
   return (
     <Dialog>
       <DialogTrigger asChild>
@@ -28,7 +33,7 @@ export const ShowPDFButton = ({ title, filePath, hoverColorClassName, buttonText
       </DialogTrigger>
       <DialogContent className="max-w-6xl w-11/12 rounded-lg">
         <DialogHeader>
-          <DialogTitle>Partitura: {title}</DialogTitle>
+          <DialogTitle>{title}</DialogTitle>
         </DialogHeader>
         <div className="w-full h-[80dvh] flex items-center justify-center">
           {/* Ejemplo para mostrar un PDF embebido si tienes la URL: */}

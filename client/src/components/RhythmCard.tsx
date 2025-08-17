@@ -9,9 +9,9 @@ interface RhythmCardProps {
   region: string;
   description: string;
   colorScheme: 'primary' | 'secondary' | 'accent' | 'colombia-green';
+  href: string;
   image?: string;
   className?: string;
-  href: string;
 }
 
 const colorVariants = {
@@ -33,9 +33,9 @@ export function RhythmCard({
   region, 
   description, 
   colorScheme, 
+  href,
   image, 
   className,
-  href 
 }: RhythmCardProps) {
   return (
     <Card className={cn(
@@ -76,7 +76,7 @@ export function RhythmCard({
           <Button 
             size="sm" 
             className={cn(
-              "flex-1 transition-all duration-200",
+              "flex-1 transition-all duration-200 text-white",
               colorScheme === 'primary' && "bg-primary hover:bg-primary/90",
               colorScheme === 'secondary' && "bg-secondary hover:bg-secondary/90",
               colorScheme === 'accent' && "bg-accent hover:bg-accent/90",
@@ -84,7 +84,7 @@ export function RhythmCard({
             )}
             href={href}
           >
-            <Music className="mr-2 h-4 w-4" />
+            <Music className="mr-2 h-4 w-4" color='white' />
             Explorar
           </Button>
         </div>

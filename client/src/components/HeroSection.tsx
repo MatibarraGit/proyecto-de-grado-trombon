@@ -5,7 +5,7 @@ import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { ChevronDown, Play, Music } from 'lucide-react';
 
-export function HeroSection() {
+export function HeroSection({ heroSectionDictionary: hsd }: { heroSectionDictionary: any }) {
   const [scrollY, setScrollY] = useState(0);
 
   // Manejar el scroll
@@ -44,12 +44,12 @@ export function HeroSection() {
       <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
         <div className="animate-fade-up">
           <h1 className="font-playfair text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-            El Trombón en el
-            <span className="block text-primary"> Folclor Colombiano</span>
+            {hsd.title1}
+            <span className="block text-primary">{hsd.title2}</span>
           </h1>
           
           <p className="text-xl md:text-2xl text-white/90 mb-8 font-light max-w-2xl mx-auto">
-            Destacar el aporte al repertorio del folclor colombiano
+            {hsd.description}
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -59,7 +59,7 @@ export function HeroSection() {
               onClick={scrollToRythms}
             >
               <Music className="mr-2 h-5 w-5" />
-              Explorar Ritmos
+              {hsd.rhythmsButton}
             </Button>
             
             <Button 
@@ -69,7 +69,7 @@ export function HeroSection() {
               href="/obra"
             >
               <Play className="mr-2 h-5 w-5" />
-              Escuchar Muestra
+              {hsd.sampleButton}
             </Button>
           </div>
         </div>

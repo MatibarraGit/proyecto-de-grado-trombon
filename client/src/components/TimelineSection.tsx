@@ -2,16 +2,16 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Badge } from '@/components/ui/badge';
 import { Clock, Music, Users, BookOpen, Award } from 'lucide-react';
 
-export function TimelineSection() {
+export function TimelineSection({ timelineDictionary: td }: { timelineDictionary: any }) {
   return (
     <section className="py-16 px-6">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="font-playfair text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Historia del Trombón en Colombia
+            {td.title}
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Un recorrido por los momentos clave que definieron la presencia del trombón en nuestra música tradicional
+            {td.description}
           </p>
         </div>
 
@@ -44,17 +44,17 @@ export function TimelineSection() {
                       <div className="flex items-center gap-2 mb-2">
                         <Badge variant="secondary" className="text-xs">
                           <Clock className="mr-1 h-3 w-3" />
-                          {event.period}
+                          {td.events[event.id].period}
                         </Badge>
                       </div>
                       <CardTitle className="font-playfair text-xl">
-                        {event.title}
+                        {td.events[event.id].title}
                       </CardTitle>
                     </CardHeader>
                     
                     <CardContent>
                       <CardDescription className="text-base leading-relaxed">
-                        {event.description}
+                      {td.events[event.id].description}
                       </CardDescription>
                     </CardContent>
                   </Card>
@@ -70,9 +70,6 @@ export function TimelineSection() {
 
 interface TimelineEvent {
   id: string;
-  period: string;
-  title: string;
-  description: string;
   icon: React.ComponentType<{ className?: string }>;
   color: string;
 }
@@ -80,33 +77,21 @@ interface TimelineEvent {
 const timelineEvents: TimelineEvent[] = [
   {
     id: 'colonial',
-    period: 'Época Colonial',
-    title: 'Influencias Europeas',
-    description: 'Llegada de instrumentos de viento europeos y primeras adaptaciones en el territorio colombiano. Los conquistadores traen tradiciones musicales que se mezclan con las indígenas.',
     icon: BookOpen,
     color: 'bg-amber-500',
   },
   {
     id: 'bandas',
-    period: 'Siglo XIX',
-    title: 'Ritmos Tradicionales',
-    description: 'Empiezan a proliferar los ritmos como la cumbia y currulao en la costa atlántica y pacífica, el bambuco y pasillo en la región andina, y el joropo en la Orinoquía.',
     icon: Users,
     color: 'bg-blue-500',
   },
   {
     id: 'clasico',
-    period: 'Siglo XX Temprano',
-    title: 'Aportes Clásicos',
-    description: 'El trombón gana protagonismo en la música clásica y contemporánea: Beethoven, Berlioz y Britten lo utilizan de manera expresiva en sus obras.',
     icon: Music,
     color: 'bg-green-500',
   },
   {
     id: 'folclorico',
-    period: 'Siglo XX-XXI',
-    title: 'Integración Folclórica',
-    description: 'En Colombia, aunque el trombón no es tradicionalmente protagonista en los ritmos patrimoniales, ha comenzado a tener mayor presencia en agrupaciones modernas, bandas sinfónicas y fusiones contemporáneas.',
     icon: Award,
     color: 'bg-purple-500',
   },

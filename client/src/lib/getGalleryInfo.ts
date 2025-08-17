@@ -17,15 +17,17 @@ export async function getGalleryInfo() {
   // Mapear los archivos y modificar sus URLs y sus fechas
   const processedData = mediaData.map((data: GalleryItem) => ({
     id: data.id,
+    isYoutubeVideo: data.isYoutubeVideo,
+    file: data?.file ? {
+      id: data.file.id,
+      url: `${STRAPI_HOST}${data.file.url}`,
+      publishedAt: formatDate(data.file.publishedAt),
+    } : undefined,
+    youtubeVideoId: data?.youtubeVideoId,
     title: data.title,
     category: data.category,
     date: data.date,
     size: data.size,
-    file: data.file = {
-      id: data.file.id,
-      url: `${STRAPI_HOST}${data.file.url}`,
-      publishedAt: formatDate(data.file.publishedAt),
-    }
   }));
 
   // Reemplazar las imágenes en data con las procesadas

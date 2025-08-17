@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
-import "./globals.css";
-import { Navigation } from "@/components/Navigation";
-
 import { Playfair_Display, Open_Sans } from 'next/font/google'
+import "./globals.css";
+
+import { Navigation } from "@/components/Navigation";
+import { getDictionary } from "../i18n/dictionary";
 
 const playfair = Playfair_Display({
   subsets: ['latin'],
@@ -33,15 +34,19 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
+  params
 }: Readonly<{
   children: React.ReactNode;
+  params: { locale: "es" | "en" };
 }>) {
+  const lang = (await params).locale;
+  const dictionary = (await getDictionary(lang, 'sidebar'));
   return (
-    <html lang="es">
+    <html lang={lang}>
       <body className={`antialiased ${playfair.className} ${openSans.className}`}>
-        <Navigation />
+        <Navigation dict={dictionary} />
         {children}
       </body>
     </html>

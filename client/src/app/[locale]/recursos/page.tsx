@@ -4,8 +4,11 @@ import { Badge } from '@/components/ui/badge';
 import { Separator } from '@/components/ui/separator';
 import { BookOpen, ExternalLink, FileText, Globe, GraduationCap, Newspaper } from 'lucide-react';
 import { referencesData } from '@/data/referencesData';
+import { getDictionary } from '@/app/i18n/dictionary';
 
-const Recursos = () => {
+const Recursos = async ({ params: { locale } }: { params: { locale: string } }) => {
+  const dict = await getDictionary(locale as 'en' | 'es', 'resources');
+
   // Función para obtener el icono según el tipo
   const getTypeIcon = (type: string) => {
     switch (type) {
@@ -69,10 +72,10 @@ const Recursos = () => {
         <div className="relative z-10 h-full flex items-center px-6">
           <div className="max-w-4xl mx-auto">
             <h1 className="font-playfair text-4xl md:text-5xl font-bold mb-4">
-              Recursos y Referencias
+              {dict.heroSection.title}
             </h1>
             <p className="text-xl opacity-90">
-              Bibliografía, fuentes y recursos utilizados en la investigación
+              {dict.heroSection.description}
             </p>
           </div>
         </div>
@@ -86,7 +89,7 @@ const Recursos = () => {
           <section>
             <div className="flex items-center gap-3 mb-8">
               <FileText className="h-6 w-6 text-primary" />
-              <h2 className="font-playfair text-3xl font-bold">Referencias Bibliográficas</h2>
+              <h2 className="font-playfair text-3xl font-bold">{dict.bibliographicReferences.title}</h2>
             </div>
             
             <div className="space-y-6">
@@ -106,11 +109,11 @@ const Recursos = () => {
                         </div>
                         <Badge variant={getBadgeVariant(reference.type)} className="flex items-center gap-1">
                           {getTypeIcon(reference.type)}
-                          {reference.type === 'article' ? 'Artículo' : 
-                           reference.type === 'book' ? 'Libro' :
-                           reference.type === 'journal' ? 'Revista' :
-                           reference.type === 'thesis' ? 'Tesis' :
-                           reference.type === 'web' ? 'Web' : 'Referencia'}
+                          {reference.type === 'article' ? dict.badges.article : 
+                           reference.type === 'book' ? dict.badges.book :
+                           reference.type === 'journal' ? dict.badges.journal :
+                           reference.type === 'thesis' ? dict.badges.thesis :
+                           reference.type === 'web' ? dict.badges.web : dict.badges.reference}
                         </Badge>
                       </div>
                       <Separator />
@@ -121,7 +124,7 @@ const Recursos = () => {
                         <Button variant="outline" size="sm" className="mt-2">
                           <a href={reference.url} target="_blank" rel="noopener noreferrer" className='flex items-center'>
                             <ExternalLink className="h-4 w-4 mr-2" />
-                            <span>Ver fuente</span>
+                            <span>{dict.actions.viewSource}</span>
                           </a>
                         </Button>
                       )}
@@ -136,7 +139,7 @@ const Recursos = () => {
           <section>
             <div className="flex items-center gap-3 mb-8">
               <BookOpen className="h-6 w-6 text-primary" />
-              <h2 className="font-playfair text-3xl font-bold">Bibliografía</h2>
+              <h2 className="font-playfair text-3xl font-bold">{dict.bibliography.title}</h2>
             </div>
             
             <div className="space-y-6">
@@ -156,10 +159,10 @@ const Recursos = () => {
                         </div>
                         <Badge variant={getBadgeVariant(item.type)} className="flex items-center gap-1">
                           {getTypeIcon(item.type)}
-                          {item.type === 'book' ? 'Libro' :
-                           item.type === 'thesis' ? 'Tesis' :
-                           item.type === 'web' ? 'Web' :
-                           item.type === 'journal' ? 'Revista' : 'Referencia'}
+                          {item.type === 'book' ? dict.badges.book :
+                           item.type === 'thesis' ? dict.badges.thesis :
+                           item.type === 'web' ? dict.badges.web :
+                           item.type === 'journal' ? dict.badges.journal : dict.badges.reference}
                         </Badge>
                       </div>
                       <Separator />
@@ -170,7 +173,7 @@ const Recursos = () => {
                         <Button variant="outline" size="sm" className="mt-2">
                           <a href={item.url.startsWith('http') ? item.url : `https://${item.url}`} target="_blank" rel="noopener noreferrer" className='flex items-center'>
                             <ExternalLink className="h-4 w-4 mr-2" />
-                            <span>Ver fuente</span>
+                            <span>{dict.actions.viewSource}</span>
                           </a>
                         </Button>
                       )}
@@ -183,44 +186,42 @@ const Recursos = () => {
 
           {/* Estadísticas */}
           <section className="bg-muted/30 rounded-lg p-6">
-            <h3 className="font-semibold mb-4">Resumen de Fuentes</h3>
+            <h3 className="font-semibold mb-4">{dict.summary.title}</h3>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               <div className="text-center">
                 <div className="text-2xl font-bold text-primary">
                   {referencesData.references.length + referencesData.bibliography.length}
                 </div>
-                <div className="text-sm text-muted-foreground">Total de fuentes</div>
+                <div className="text-sm text-muted-foreground">{dict.summary.totalSources}</div>
               </div>
               <div className="text-center">
                 <div className="text-2xl font-bold text-primary">
                   {referencesData.references.filter(r => r.type === 'book').length + 
                    referencesData.bibliography.filter(b => b.type === 'book').length}
                 </div>
-                <div className="text-sm text-muted-foreground">Libros</div>
+                <div className="text-sm text-muted-foreground">{dict.summary.books}</div>
               </div>
               <div className="text-center">
                 <div className="text-2xl font-bold text-primary">
                   {referencesData.references.filter(r => r.type === 'article').length}
                 </div>
-                <div className="text-sm text-muted-foreground">Artículos</div>
+                <div className="text-sm text-muted-foreground">{dict.summary.articles}</div>
               </div>
               <div className="text-center">
                 <div className="text-2xl font-bold text-primary">
                   {referencesData.references.filter(r => r.type === 'web').length + 
                    referencesData.bibliography.filter(b => b.type === 'web').length}
                 </div>
-                <div className="text-sm text-muted-foreground">Recursos web</div>
+                <div className="text-sm text-muted-foreground">{dict.summary.webResources}</div>
               </div>
             </div>
           </section>
 
           {/* Nota sobre referencias */}
           <section className="bg-muted/30 rounded-lg p-6">
-            <h3 className="font-semibold mb-3">Nota sobre las Referencias</h3>
+            <h3 className="font-semibold mb-3">{dict.note.title}</h3>
             <p className="text-sm text-muted-foreground">
-              Esta bibliografía representa una selección de las fuentes más relevantes utilizadas en la investigación sobre el trombón en la música tradicional colombiana. 
-              Las referencias incluyen tanto fuentes académicas como recursos digitales que han sido fundamentales para el desarrollo de este proyecto. 
-              Para acceder a los textos completos o solicitar información adicional, puede contactar al autor a través de los canales institucionales correspondientes.
+              {dict.note.content}
             </p>
           </section>
 

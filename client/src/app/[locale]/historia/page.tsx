@@ -2,9 +2,12 @@ import { MapPin } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { historiaData } from '@/data/historiaData';
+import { getDictionary } from '@/app/i18n/dictionary';
 
-const Historia = () => {
-  const {  introduction, introduction2, timelineEvents, trombonColombia } = historiaData;
+const Historia = async ({ params: { locale } }: { params: { locale: string } }) => {
+  const dict = await getDictionary(locale as 'en' | 'es', 'historia');
+  const { introduction, introduction2, timelineEvents, trombonColombia } = historiaData;
+  
   return (
     <main className="min-h-screen md:ml-72">
       {/* Hero Section */}
@@ -13,10 +16,10 @@ const Historia = () => {
         <div className="relative z-10 h-full flex items-center px-6">
           <div className="max-w-4xl mx-auto">
             <h1 className="font-playfair text-4xl md:text-5xl font-bold mb-4">
-              Historia del Trombón en Colombia
+              {dict.heroSection.title}
             </h1>
             <p className="text-xl opacity-90">
-              Un viaje desde Europa hasta el corazón del folclor colombiano
+              {dict.heroSection.description}
             </p>
           </div>
         </div>
@@ -29,7 +32,7 @@ const Historia = () => {
           {/* Introduction */}
           <Card>
             <CardHeader>
-              <CardTitle className="font-playfair text-2xl">Introducción y Contexto</CardTitle>
+              <CardTitle className="font-playfair text-2xl">{dict.introduction.title}</CardTitle>
             </CardHeader>
             <CardContent className="text-lg leading-relaxed space-y-4">
               <p>{introduction}</p>
@@ -40,7 +43,7 @@ const Historia = () => {
           {/* Trombon History */}
           <Card>
             <CardHeader>
-              <CardTitle className="font-playfair text-2xl">El trombón dentro de las músicas colombianas</CardTitle>
+              <CardTitle className="font-playfair text-2xl">{dict.trombonColombia.title}</CardTitle>
             </CardHeader>
             <CardContent className="text-lg leading-relaxed space-y-4">
               {trombonColombia.map((item) => (
@@ -55,7 +58,7 @@ const Historia = () => {
           {/* Timeline */}
           <section>
             <h2 className="font-playfair text-3xl font-bold text-center mb-12">
-              Línea de Tiempo Detallada
+              {dict.timeline.title}
             </h2>
             
             <div className="space-y-8">

@@ -1,0 +1,480 @@
+{
+  "sidebar": {
+    "h2": "The Trombone in the",
+    "h3": " Colombian Folklore",
+    "home": "Home",
+    "metodology": "Metodology",
+    "history": "History",
+    "cumbia": "Cumbia",
+    "currulao": "Currulao",
+    "pasillo": "Pasillo & Bambuco",
+    "joropo": "Joropo",
+    "work": "Work",
+    "galery": "Galery",
+    "resume": "Resume",
+    "resources": "Resources",
+    "quote": "Highlighting the contribution to the repertoire of Colombian folklore",
+    "footer": "Musical Degree Project"
+  },
+
+  "index": {
+    "heroSection": {
+      "title": "El Trombón en el Folclor Colombiano",
+      "description": "Destacar el aporte al repertorio del folclor colombiano",
+      "rhythmsButton": "Explorar Ritmos",
+      "sampleButton": "Explorar Muestra"
+    },
+
+    "timelineSection": {
+      "title": "Historia del Trombón en Colombia",
+      "description": "Un recorrido por los momentos clave que definieron la presencia del trombón en nuestra música tradicional",
+      "events": [
+        {
+          "id": "colonial",
+          "period": "Época Colonial",
+          "title": "Influencias Europeas",
+          "description": "Llegada de instrumentos de viento europeos y primeras adaptaciones en el territorio colombiano. Los conquistadores traen tradiciones musicales que se mezclan con las indígenas."
+        },
+        {
+          "id": "bandas",
+          "period": "Siglo XIX",
+          "title": "Ritmos Tradicionales",
+          "description": "Empiezan a proliferar los ritmos como la cumbia y currulao en la costa atlántica y pacífica, el bambuco y pasillo en la región andina, y el joropo en la Orinoquía."
+        },
+        {
+          "id": "clasico",
+          "period": "Siglo XX Temprano",
+          "title": "Aportes Clásicos",
+          "description": "El trombón gana protagonismo en la música clásica y contemporánea: Beethoven, Berlioz y Britten lo utilizan de manera expresiva en sus obras."
+        },
+        {
+          "id": "folclorico",
+          "period": "Siglo XX-XXI",
+          "title": "Integración Folclórica",
+          "description": "En Colombia, aunque el trombón no es tradicionalmente protagonista en los ritmos patrimoniales, ha comenzado a tener mayor presencia en agrupaciones modernas, bandas sinfónicas y fusiones contemporáneas."
+        }
+      ]
+    },
+
+    "rhythmsSection": {
+      "title": "Ritmos y Regiones",
+      "description": "Explora cómo el trombón se ha integrado en los diferentes géneros musicales tradicionales de Colombia",
+      "rhythms": {
+        "cumbia": {
+          "title": "Cumbia",
+          "region": "Costa Atlántica",
+          "description": "Ritmo emblemático de la región atlántica, que nació fusionando elementos africanos, indígenas y españoles. El trombón aporta profundidad y carácter a esta expresión musical."
+        },
+        "currulao": {
+          "title": "Currulao",
+          "region": "Costa Pacífica",
+          "description": "Expresión musical del litoral pacífico que combina ancestralidad africana con la sonoridad del trombón, creando un diálogo único entre tradición y modernidad."
+        },
+        "pasillo": {
+          "title": "Pasillo y Bambuco",
+          "region": "Región Andina",
+          "description": "Géneros representativos de la región andina colombiana donde el trombón ha encontrado un espacio especial para expresar la melancolía y alegría de nuestra montaña."
+        },
+        "joropo": {
+          "title": "Joropo",
+          "region": "Orinoquía",
+          "description": "Música llanera que con la incorporación del trombón ha ganado nuevas dimensiones sonoras, manteniendo la esencia del trabajo y la vida en los llanos orientales."
+        }
+      }
+    },
+
+    "methodologySection": {
+      "title": "Elaboración de la Obra",
+      "description1": "Una suite en tres movimientos que representa el viaje musical del trombón en Colombia:",
+      "description2": " Confusión, Conciencia y Renacer",
+      "movements": {
+        "confusion": {
+          "number": "1",
+          "title": "Confusión",
+          "description": "La búsqueda de identidad musical en un contexto globalizado"
+        },
+        "consciousness": {
+          "number": "2",
+          "title": "Conciencia",
+          "description": "El descubrimiento de las raíces y tradiciones propias"
+        },
+        "rebirth": {
+          "number": "3",
+          "title": "Renacer",
+          "description": "La síntesis creativa entre tradición y modernidad"
+        }
+      }
+    }
+  },
+
+  "metodology": {
+    "heroSection": {
+      "title": "Research Methodology",
+      "description": "Design and approach of the study on the trombone in Colombian folklore"
+    },
+    "researchObjectives": {
+      "title": "Study Objectives",
+      "generalObjectives": {
+        "subtitle": "General Objectives",
+        "items": [
+          {
+            "description": "Highlight the contribution of the trombone to the Colombian folklore repertoire through the creation of a work that will be a short suite for trombone and band composed of three contrasting movements which are:",
+            "movements": [
+              "1 - Confusion (pasillo)",
+              "2 - Consciousness (cumbia)",
+              "3 - Rebirth (currulao)"
+            ],
+            "conclusion": "Thus demonstrating the versatility and expressive capacity of the instrument in autochthonous musical contexts."
+          },
+          {
+            "description": "Through a historical and territorial journey, we aim to account for the current state of Colombian folklore as well as the evolution that led it to mix with practices as complex as orchestral ones, with the trombone as the main element. From this, the composition of the suite is proposed as a contribution to the repertoire of Colombian rhythms representative of each region of the country."
+          }
+        ]
+      },
+      "specificObjectives": {
+        "subtitle": "Specific Objectives",
+        "items": [
+          "Identify the type of rhythm according to Colombian regions.",
+          "Know the contribution of the trombone in each of them (rhythms).",
+          "Understand why the trombone has little prominence within the identified and chosen rhythms.",
+          "Propose a composition that contributes to each of the rhythms to be addressed, with the trombone as the clear protagonist."
+        ]
+      }
+    }
+  },
+
+  "history": {
+    "heroSection": {
+      "title": "History of the Trombone in Colombia",
+      "description": "A journey from Europe to the heart of Colombian folklore"
+    },
+    "introduction": {
+      "title": "Introduction and Context"
+    },
+    "trombonColombia": {
+      "title": "The trombone within Colombian music"
+    },
+    "timeline": {
+      "title": "Detailed Timeline"
+    }
+  },
+
+  "cumbia": {
+    "heroSection": {
+      "title": "Cumbia",
+      "description": "Atlantic Coast - The rhythm that conquered Colombia's heart"
+    },
+    "historicalDescription": {
+      "title": "History and Cultural Context",
+      "content": "Cumbia, whose name comes from the word \"cumbancha\", is perhaps the most representative and important rhythm of the Atlantic region. Born from the fusion between African cadence, indigenous monotonous sounds, and the festive character of the coast, cumbia is a national symbol recognized even outside Colombia.",
+      "quote": "Cumbia with trombone represents the natural evolution of our traditions, where each instrument contributes its voice to the ancestral choir of the Atlantic Coast."
+    },
+    "musicalCharacteristics": {
+      "title": "Musical Characteristics",
+      "mainTypes": {
+        "title": "Main Types",
+        "items": [
+          "Modern cumbia: in addition to traditional instruments, it includes singing (telling stories of coastal experiences)",
+          "Classical cumbia: characterized by the absence of voices and the prominence of instruments, especially the guacharaca"
+        ]
+      },
+      "tromboneRole": {
+        "title": "Trombone's Role",
+        "paragraphs": [
+          "The trombone found its place in cumbia during the 20th century, when pelayera bands began incorporating brass wind instruments to enrich the traditional sound. Its deep and expressive timbre perfectly complements ancestral rhythmic patterns, providing harmonic and melodic depth to the ensemble.",
+          "In contemporary cumbia interpretation, the trombone plays both melodic and harmonic roles, dialoguing with the gaita, accordion, and percussion to create unique sound textures that maintain the folkloric essence while embracing instrumental modernity."
+        ]
+      }
+    }
+  },
+
+  "currulao": {
+    "heroSection": {
+      "title": "Currulao",
+      "description": "Pacific Coast - African ancestrality in modern sound"
+    },
+    "historicalDescription": {
+      "title": "History and Cultural Context",
+      "paragraphs": [
+        "The origin of the word currulao is closely related to cunuano, which refers to the type of drum called cununo, an important instrument when talking about rhythms from the Pacific region.",
+        "It is a flagship rhythm within the Afro-Colombian population, also influenced by enslaved black communities in Latin America, who brought with them traditions of santería and religious rites, which is why those who interpret it as part of their culture attribute ancestral properties to it, it's like a kind of ritual.",
+        "It is accompanied by a traditional dance that bears the same name (currulao)."
+      ],
+      "quote": "Currulao with trombone is the meeting of two sound worlds: African ancestrality and instrumental modernity, creating new forms of cultural expression."
+    },
+    "musicalCharacteristics": {
+      "title": "Currulao Characteristics",
+      "traditionalInstrumentation": {
+        "title": "Traditional Instrumentation",
+        "items": [
+          "Indigenous marimba",
+          "Bombo (bass drum)",
+          "Cununo (high drum)",
+          "Guasá (idiophones)",
+          "Voices (responsorial choir)"
+        ]
+      },
+      "variants": {
+        "title": "Variants",
+        "description": "Like cumbia, there are two types:",
+        "items": [
+          "La Juga",
+          "El Berejú"
+        ]
+      }
+    },
+    "tromboneContribution": {
+      "title": "Trombone's Contribution",
+      "content": "Currulao and cumbia, typical of Colombian coastal areas, were characterized by their speed and interesting combination of percussion with wind instruments. Although in this case the trombone is not the protagonist either, it is an important contribution for its subsequent inclusion within the rhythms addressed, since its union with our tradition occurs or opens through areas that develop along the sea."
+    }
+  },
+
+  "pasillo": {
+    "heroSection": {
+      "title": "Pasillo and Bambuco",
+      "description": "Andean Region - The melancholy and joy of our mountains"
+    },
+    "historicalDescription": {
+      "title": "History and Cultural Context",
+      "pasillo": {
+        "title": "Pasillo",
+        "paragraphs": [
+          "Pasillo is one of the most recent national rhythms, as it emerged during the independence era, in contrast to other rhythms that developed during the colonial period. Its musical foundation comes from the Austrian waltz, mixed with creole dances from the interior of Colombia.",
+          "Initially it was performed in salons, mainly with piano, but later became popular in more humble sectors by including instruments such as guitar, tiple, and bandola. This transition gave pasillo a more festive and dynamic character, making it a fast and technical rhythm that represents challenges for both musicians and dancers."
+        ]
+      },
+      "bambuco": {
+        "title": "Bambuco",
+        "paragraphs": [
+          "Bambuco is considered the most representative rhythm of the Colombian Andean region. Unlike pasillo, its performance is usually handled by small groups (2 or 3 musicians) and is accompanied by instruments such as guitar, tiple, and even flute in some versions.",
+          "This deeply peasant rhythm is the result of a rich racial mix, being one of the emblems of national folklore, although not so well known outside the country. Sanjuanero, for example, is a derivation of bambuco. Throughout history, bambuco has had contact with rhythms such as the Cuban habanera, which evidences the dialogue between cultures in its evolution."
+        ]
+      },
+      "quote": "In pasillo and bambuco, the trombone sings the stories of our people, their joys and nostalgias, their celebrations and remembrances."
+    },
+    "comparisonTable": {
+      "title": "Pasillo vs Bambuco",
+      "headers": {
+        "aspect": "Aspect",
+        "pasillo": "Pasillo",
+        "bambuco": "Bambuco"
+      },
+      "rows": [
+        {
+          "aspect": "🏛️ Historical origin",
+          "pasillo": "Emerges in the independence era, influenced by the Austrian waltz",
+          "bambuco": "Of older tradition, with roots in the colonial era"
+        },
+        {
+          "aspect": "🌍 Associated region",
+          "pasillo": "Interior of Colombia (Andean zone)",
+          "bambuco": "Colombian Andean region"
+        },
+        {
+          "aspect": "🎭 Influences",
+          "pasillo": "Mix of European waltz and creole dances",
+          "bambuco": "Fusion of indigenous, African, and Spanish traditions"
+        },
+        {
+          "aspect": "🎵 Initial instrumentation",
+          "pasillo": "Piano (in salons), then guitar, tiple, bandola",
+          "bambuco": "Guitar, tiple, flute; in small groups (2 or 3 musicians)"
+        },
+        {
+          "aspect": "🎶 Musical character",
+          "pasillo": "Fast and technical, difficulty for dancers and musicians",
+          "bambuco": "More peasant and vocal, associated with singing and regional identity"
+        },
+        {
+          "aspect": "📈 Cultural evolution",
+          "pasillo": "Mixed with bambuco, adopting a more festive character",
+          "bambuco": "Generated variants like sanjuanero; less known internationally"
+        },
+        {
+          "aspect": "🎓 Academic projection",
+          "pasillo": "Composers like Pedro Morales Pino promoted it as national music",
+          "bambuco": "Has been a symbol of the Colombian interior, but with less external diffusion"
+        },
+        {
+          "aspect": "🎺 Trombone presence",
+          "pasillo": "Scarce in origin; currently seeking to vindicate it in symphonic arrangements",
+          "bambuco": "Traditionally excluded, but with potential in new orchestral formats"
+        }
+      ]
+    },
+    "tromboneContribution": {
+      "title": "Trombone's Contribution",
+      "pasillo": {
+        "title": "Trombone in Pasillo",
+        "items": [
+          "Historical participation: It was not part of the original groups. Pasillo was mainly played with piano, guitar, tiple, and bandola.",
+          "Current protagonism: In this thesis we present the movement \"Confusion (Pasillo)\", in which we propose the trombone as the central instrument.",
+          "Technical challenge: A lyrical and explosive melodic line is sought that allows the trombone to stand out without overshadowing the symphonic band.",
+          "Reason for inclusion: Vindicate the trombone as part of the national repertoire through a reinterpretation of the festive pasillo in symphonic format."
+        ]
+      },
+      "bambuco": {
+        "title": "Trombone in Bambuco",
+        "items": [
+          "Aesthetic challenge: Integrating it involves balancing the trombone's power with bambuco's melodic essence.",
+          "Symphonic adaptation: The symphonic band allows instrumental expansion where the trombone can play a leading role.",
+          "Cultural justification: Internationalization movements and contact with music from the Caribbean, Mexico, and South America opened the way for wind instruments.",
+          "Compositional proposal: The trombone is proposed as a lyrical instrument that dialogues with the orchestra, inspired by the concerto grosso.",
+          "Expressive impact: The trombone can contribute emotion, dynamism, and depth to the Colombian Andean repertoire, without sacrificing identity."
+        ]
+      }
+    }
+  },
+
+  "joropo": {
+    "heroSection": {
+      "title": "Joropo",
+      "description": "Orinoquía - The spirit of the plains in new sound dimensions"
+    },
+    "historicalDescription": {
+      "title": "History and Cultural Context",
+      "paragraphs": [
+        "This musical type developed during the colonial period with Hispanic creole traditions and slight African influences, it has a fast rhythm also with a bit of waltz mixture, its singing is called copla, its main instruments are the harp, cuatro, and a type of maraca called capacho.",
+        "In this type of music, musical confrontations are held where singing predominates, these competitions are called contrapunteo. In the Orinoquía, the word joropo means dance and celebration.",
+        "Joropo dance is vigorous and demanding. It is usually performed in pairs, with short and fast steps that imitate the trot of horses, thus symbolizing the bond between the peasant and nature. In many versions, dancers also perform energetic stomping that reinforces the festive and tribal character of the rhythm."
+      ],
+      "quote": "Joropo with trombone is like the wind that crosses the plains: it maintains its ancestral force but embraces new sound horizons."
+    },
+    "musicalCharacteristics": {
+      "title": "Musical Characteristics",
+      "items": [
+        "Fast and syncopated rhythm, with strong presence of 3/4 and 6/8 in musical meter.",
+        "Improvised copla as a form of lyrical expression.",
+        "Vocal contrapunteo between performers, which demonstrates ingenuity and mastery of oral tradition.",
+        "Stomping dance with great rhythmic force, performed in pairs.",
+        "Festive, cheerful, and combative character, associated with rural life and community celebrations.",
+        "Narrative content in the lyrics, which speak of landscape, cattle, love, and regional pride."
+      ]
+    },
+    "aboutJoropo": {
+      "title": "About Joropo",
+      "instrumentation": {
+        "title": "Instrumentation",
+        "items": [
+          "Llanera harp or bandola",
+          "Llanero cuatro",
+          "Maracas (of the capacho type)"
+        ]
+      },
+      "variants": {
+        "title": "Variants",
+        "items": [
+          "Llanero Joropo",
+          "Central Joropo"
+        ]
+      }
+    },
+    "tromboneContribution": {
+      "title": "Trombone's Contribution",
+      "items": [
+        "Historical absence: In its peasant roots, the trombone was not present in traditional joropo. Instrumentation was limited to harp, cuatro, and maracas.",
+        "Technical limitations: The original format did not offer spaces or arrangements for brass wind instruments due to its acoustic and intimate nature.",
+        "Contemporary potential: Currently, the trombone can be incorporated into symphonic arrangements and modern llanera bands to enrich joropo's sound.",
+        "Expressive contribution: Its ability to produce lyrical and explosive lines makes it an excellent vehicle for melodic drama within joropo-based works.",
+        "Symphonic proposal: The inclusion of the trombone in compositions is proposed as part of the reinterpretation of this rhythm in orchestral key, maintaining the festive spirit but expanding instrumental color.",
+        "Instrumental dialogue: The trombone can establish counterpoints with the harp and cuatro, imitating vocal contrapunteo, which allows enriching timbral games in a symphonic band."
+      ]
+    }
+  },
+
+  "work": {
+    "heroSection": {
+      "title": "The Musical Work",
+      "description": "Suite for trombone and band: Confusion, Consciousness and Rebirth"
+    },
+    "suiteStructure": {
+      "title": "Suite Structure: Three Movements"
+    },
+    "movements": {
+      "confusion": {
+        "number": "I",
+        "title": "Confusion",
+        "description": "First movement that explores the search for sonic identity between tradition and modernity in Colombian pasillo.",
+        "audioTitle": "Movement I - Confusion",
+        "audioDescription": "Pasillo for trombone and band",
+        "pdfTitle": "Score: Movement I - Confusion",
+        "scoreButton": "View score (PDF)"
+      },
+      "consciousness": {
+        "number": "II",
+        "title": "Consciousness",
+        "description": "Second movement that represents awakening and clarity in the fusion of diverse musical elements.",
+        "audioTitle": "Movement II - Consciousness",
+        "audioDescription": "Cumbia for trombone and band",
+        "pdfTitle": "Score: Movement II - Consciousness",
+        "scoreButton": "View score (PDF)"
+      },
+      "rebirth": {
+        "number": "III",
+        "title": "Rebirth",
+        "description": "Final movement that symbolizes the renewal and transformation of traditional folklore towards new expressions.",
+        "audioTitle": "Movement III - Rebirth",
+        "audioDescription": "Currulao for trombone and band",
+        "pdfTitle": "Score: Movement III - Rebirth",
+        "scoreButton": "View score (PDF)"
+      }
+    }
+  },
+
+  "hojaDeVida": {
+    "title": "Resume",
+    "description": "Here you can consult and download the Resume in its two versions: the updated version and the previous version. Open the viewer to read them on screen or use the download links.",
+    "updated": {
+      "title": "Resume – Updated Version",
+      "description": "PDF document with the most recent professional information."
+    },
+    "previous": {
+      "title": "Resume – Previous Version",
+      "description": "PDF document with the previous version of the curriculum."
+    },
+    "actions": {
+      "viewCV": "View resume (PDF)",
+      "openInNewTab": "Open in new tab",
+      "openUpdatedCV": "Open updated Resume in a new tab",
+      "openPreviousCV": "Open previous Resume in a new tab"
+    }
+  },
+
+  "resources": {
+    "heroSection": {
+      "title": "Resources and References",
+      "description": "Bibliography, sources and resources used in the research"
+    },
+    "bibliographicReferences": {
+      "title": "Bibliographic References",
+      "icon": "FileText"
+    },
+    "bibliography": {
+      "title": "Bibliography",
+      "icon": "BookOpen"
+    },
+    "summary": {
+      "title": "Sources Summary",
+      "totalSources": "Total sources",
+      "books": "Books",
+      "articles": "Articles",
+      "webResources": "Web resources"
+    },
+    "note": {
+      "title": "Note on References",
+      "content": "This bibliography represents a selection of the most relevant sources used in research on the trombone in traditional Colombian music. The references include both academic sources and digital resources that have been fundamental for the development of this project. To access the complete texts or request additional information, you can contact the author through the corresponding institutional channels."
+    },
+    "badges": {
+      "book": "Book",
+      "article": "Article",
+      "journal": "Journal",
+      "thesis": "Thesis",
+      "web": "Web",
+      "reference": "Reference"
+    },
+    "actions": {
+      "viewSource": "View source",
+      "openInNewTab": "Open in new tab"
+    }
+  }
+}

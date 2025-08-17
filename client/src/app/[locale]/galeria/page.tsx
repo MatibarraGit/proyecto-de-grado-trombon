@@ -1,15 +1,12 @@
-// TODO: Añadir reproductor de youtube para videos largos
-
 "use client";
 
 import { useState } from 'react';
-import { Camera, Music4, Calendar } from 'lucide-react';
+import { Camera, Music4, Calendar, Play } from 'lucide-react';
 import Image from 'next/image';
 
 import { Badge } from '@/components/ui/badge';
 import { Card } from '@/components/ui/card';
-import { DialogTitle } from '@radix-ui/react-dialog';
-import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog';
+import { Dialog, DialogContent, DialogTrigger, DialogTitle } from '@/components/ui/dialog';
 
 import { useFetchData } from '@/hooks';
 import { getGalleryInfo } from '@/lib/getGalleryInfo';
@@ -40,6 +37,8 @@ export default function Galeria() {
         return 'col-span-1 row-span-1';
     }
   };
+
+  const buildYouTubeThumbnailUrl = (videoId: string) => `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
 
   return (
     <main className="min-h-screen bg-background md:ml-72">
@@ -89,20 +88,53 @@ export default function Galeria() {
                     `}
                   >
                     <div className="relative h-full w-full">
-                      <Image
-                        src={item.file.url}
-                        alt="Alt text"
-                        width={500}
-                        height={750}
-                        className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                      {item.isYoutubeVideo ? (
+                        item.youtubeVideoId ? (
+                          <>
+                            <Image
+                              src={buildYouTubeThumbnailUrl(item.youtubeVideoId)}
+                              alt={item.title}
+                              width={500}
+                              height={750}
+                              className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
+                            <div className="absolute inset-0 flex items-center justify-center">
+                              <div className="rounded-full bg-black/60 p-3">
+                                <Play className="h-8 w-8 text-white" />
+                              </div>
+                            </div>
+                          </>
+                        ) : (
+                          <>
+                            <div className="h-full w-full bg-black/90 flex items-center justify-center">
+                              <div className="text-center text-white">
+                                <Play className="h-12 w-12 mx-auto mb-2 text-primary" />
+                                <p className="text-sm">Video</p>
+                              </div>
+                            </div>
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
+                          </>
+                        )
+                      ) : (
+                        <>
+                          <Image
+                            src={item?.file?.url || ""}
+                            alt="Alt text"
+                            width={500}
+                            height={750}
+                            className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+                          />
+                          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                        </>
+                      )}
                       
                       {/* Overlay Content */}
                       <div className="absolute bottom-0 left-0 right-0 p-4 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
                         <h3 className="font-semibold text-sm md:text-base mb-1 truncate">
                           {item.title}
                         </h3>
+
                         <div className="flex items-center gap-2 text-xs">
                           <Music4 className="h-3 w-3" />
                           <span>{item.category}</span>
@@ -114,24 +146,43 @@ export default function Galeria() {
                   </Card>
                 </DialogTrigger>
                 
-                <DialogContent className="max-w-4xl max-h-[90vh] p-0">
+                <DialogContent 
+                  className="max-w-4xl max-h-[90vh] p-0" 
+                  closeButtonClassNames="h-6 w-6 flex items-center justify-center rounded-xl bg-muted border border-border hover:bg-accent hover:text-accent-foreground transition-all duration-200 disabled:pointer-events-none"
+                  onOpenAutoFocus={(e) => e.preventDefault()}
+                >
                   <div className="relative">
-                    <Image
-                      src={item.file.url}
-                      alt="Alt text"
-                      width={900}
-                      height={700}
-                      className="w-full h-auto max-h-[80vh] object-contain rounded-lg"
-                    />
-                    <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6 rounded-b-lg">
-                      <h2 className="font-playfair text-2xl font-bold text-white mb-2">
+                    {item.isYoutubeVideo && item.youtubeVideoId ? (
+                      <div className="aspect-video w-full">
+                        <iframe
+                          src={`https://www.youtube.com/embed/${item.youtubeVideoId}`}
+                          title={item.title}
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                          allowFullScreen
+                          className="w-full h-full rounded-lg"
+                        />
+                      </div>
+                    ) : (
+                      <Image
+                        src={item?.file?.url || ""}
+                        alt="Alt text"
+                        width={900}
+                        height={700}
+                        className="w-full h-auto max-h-[80vh] object-contain rounded-lg"
+                      />
+                    )}
+
+                    <div className="bg-background p-6">
+                      <h2 className="font-playfair text-2xl font-bold text-foreground mb-2">
                         {item.title}
                       </h2>
-                      <div className="flex items-center gap-4 text-white/90">
+
+                      <div className="flex items-center gap-4 text-muted-foreground">
                         <div className="flex items-center gap-2">
                           <Music4 className="h-4 w-4" />
                           <span>{item.category}</span>
                         </div>
+
                         <div className="flex items-center gap-2">
                           <Calendar className="h-4 w-4" />
                           <span>{item.date}</span>
@@ -152,19 +203,19 @@ export default function Galeria() {
           <h2 className="font-playfair text-3xl font-bold text-foreground mb-8">
             Galería en Números
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="space-y-2">
-              {/* <div className="text-4xl font-bold text-primary">{galleryItems.length}</div> */}
+              <div className="text-4xl font-bold text-primary">{mediaData.length}</div>
               <div className="text-muted-foreground">Imágenes en Galería</div>
             </div>
             <div className="space-y-2">
               <div className="text-4xl font-bold text-primary">{categories.length - 1}</div>
               <div className="text-muted-foreground">Categorías</div>
             </div>
-            <div className="space-y-2">
+            {/* <div className="space-y-2">
               <div className="text-4xl font-bold text-primary">1</div>
               <div className="text-muted-foreground">Instrumento Protagonista</div>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
