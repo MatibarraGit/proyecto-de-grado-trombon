@@ -5,7 +5,15 @@ import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { ChevronDown, Play, Music } from 'lucide-react';
 
-export function HeroSection({ heroSectionDictionary: hsd }: { heroSectionDictionary: any }) {
+interface HeroSectionDictionary {
+  title1: string
+  title2: string
+  description: string
+  rhythmsButton: string
+  sampleButton: string
+}
+
+export function HeroSection({ heroSectionDictionary: hsd }: { heroSectionDictionary: HeroSectionDictionary }) {
   const [scrollY, setScrollY] = useState(0);
 
   // Manejar el scroll

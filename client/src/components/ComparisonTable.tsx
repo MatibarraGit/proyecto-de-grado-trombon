@@ -1,4 +1,18 @@
-export const ComparisonTable = async ({ dict }: { dict: any }) => {
+interface ComparisonTableProps {  
+  title: string,
+  headers: {
+    aspect: string,
+    pasillo: string,
+    bambuco: string
+  },
+  rows: {
+    aspect: string,
+    pasillo: string,
+    bambuco: string
+  }[]
+}
+
+export const ComparisonTable = async ({ dict }: { dict: ComparisonTableProps }) => {
   return (
     <div className="relative max-w-full mx-auto">
       <div className="max-w-full overflow-x-auto rounded-lg bg-white/25 dark:bg-black/25">
@@ -6,18 +20,18 @@ export const ComparisonTable = async ({ dict }: { dict: any }) => {
           <thead className="bg-[rgb(254,230,212)]">
             <tr className="bg-table-header">
               <th className="border border-[#DAC6B7] p-3 text-left font-semibold text-sm md:text-base">
-                {dict.comparisonTable.headers.aspect}
+                {dict.headers.aspect}
               </th>
               <th className="border border-[#DAC6B7] p-3 text-left font-semibold text-sm md:text-base">
-                {dict.comparisonTable.headers.pasillo}
+                {dict.headers.pasillo}
               </th>
               <th className="border border-[#DAC6B7] p-3 text-left font-semibold text-sm md:text-base"> 
-                {dict.comparisonTable.headers.bambuco}
+                {dict.headers.bambuco}
               </th>
             </tr>
           </thead>
           <tbody>
-            {dict.comparisonTable.rows.map((row, index) => (
+            {dict.rows.map((row, index) => (
               <tr key={index} className="even:bg-table-cell transition-colors">
                 <td className="border border-[#DAC6B7] p-3 font-medium text-sm lg:text-base">
                   {row.aspect}

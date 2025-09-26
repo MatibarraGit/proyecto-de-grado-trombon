@@ -4,6 +4,16 @@ import { ShowPDFButton } from '@/components/ShowPDFButton';
 import { getDictionary } from '@/app/i18n/dictionary';
 import { cn } from '@/lib';
 
+interface Movements {
+  number: string,
+  title: string,
+  description: string,
+  audioTitle: string,
+  audioDescription: string,
+  pdfTitle: string,
+  scoreButton: string
+}
+
 const Obra = async ({ params: { locale } }: { params: { locale: string } }) => {
   const dict = await getDictionary(locale as 'en' | 'es', 'work');
   const movements = Object.values(dict.movements)
@@ -36,19 +46,19 @@ const Obra = async ({ params: { locale } }: { params: { locale: string } }) => {
             </h2>
             
             <div className="grid grid-cols-1  xl:grid-cols-3 gap-8">
-              {movements.map((movement: any, index: number) => (
+              {(movements as Array<Movements>).map((movement, index) => (
                 <Card key={movement.title} className="text-center">
                   <CardHeader>
                     <div className={cn("mx-auto w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mb-4", {
-                      "bg-red-500/10": mediaData[index].progressColor === "bg-red-500",
-                      "bg-yellow-500/10": mediaData[index].progressColor === "bg-yellow-500",
-                      "bg-blue-500/10": mediaData[index].progressColor === "bg-blue-500",
+                      "bg-red-500/10": mediaData[index]?.progressColor === "bg-red-500",
+                      "bg-yellow-500/10": mediaData[index]?.progressColor === "bg-yellow-500",
+                      "bg-blue-500/10": mediaData[index]?.progressColor === "bg-blue-500",
                     })}>
                       <span className={cn(
                         "text-2xl font-bold text-accent", {
-                          "text-red-500": mediaData[index].progressColor === "bg-red-500",
-                          "text-yellow-500": mediaData[index].progressColor === "bg-yellow-500",
-                          "text-blue-500": mediaData[index].progressColor === "bg-blue-500",
+                          "text-red-500": mediaData[index]?.progressColor === "bg-red-500",
+                          "text-yellow-500": mediaData[index]?.progressColor === "bg-yellow-500",
+                          "text-blue-500": mediaData[index]?.progressColor === "bg-blue-500",
                         }
                       )}>
                         {movement.number}
@@ -64,15 +74,15 @@ const Obra = async ({ params: { locale } }: { params: { locale: string } }) => {
                     <AudioPlayer
                       title={movement.audioTitle}
                       description={movement.audioDescription}
-                      audioPath={mediaData[index].audioPath}
-                      progressColor={mediaData[index].progressColor}
+                      audioPath={mediaData[index]?.audioPath}
+                      progressColor={mediaData[index]?.progressColor}
                     />
                     
                     <ShowPDFButton
-                    title={movement.pdfTitle}
-                    filePath={mediaData[index].filePath}
-                    hoverColorClassName={mediaData[index].hoverColorClassName}
-                    buttonText={movement.scoreButton}
+                      title={movement.pdfTitle}
+                      filePath={mediaData[index]?.filePath}
+                      hoverColorClassName={mediaData[index]?.hoverColorClassName}
+                      buttonText={movement.scoreButton}
                     />
 
                   </CardContent>

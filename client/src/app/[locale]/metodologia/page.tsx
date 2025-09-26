@@ -42,7 +42,7 @@ const Metodologia = async ({ params: { locale } }: { params: { locale: string } 
                 </CardHeader>
                 <CardContent>
                   <ul className="space-y-3" >
-                    {dict.researchObjectives.generalObjectives.items.map((item: any, index: number) => (
+                    {dict.researchObjectives.generalObjectives.items.map((item: { description: string, movements?: string[], conclusion?: string }, index: number) => (
                       <li key={index} className="flex items-start gap-2">
                         <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0" />
                         <div>

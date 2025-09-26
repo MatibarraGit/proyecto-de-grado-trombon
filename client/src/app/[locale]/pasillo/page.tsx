@@ -60,7 +60,7 @@ const Pasillo = async ({ params: { locale } }: { params: { locale: string } }) =
               <CardTitle className="font-playfair text-2xl">{dict.comparisonTable.title}</CardTitle>
             </CardHeader>
             <CardContent>
-              <ComparisonTable dict={dict} />
+              <ComparisonTable dict={dict.comparisonTable} />
             </CardContent>
           </Card>
 

@@ -23,6 +23,11 @@ interface RhythmsDictionary {
   [key: string]: RhythmData;
 }
 
+interface MovementInfo { 
+  title: string, 
+  description: string 
+}
+
 export default async function Index ({ params }: { params: Promise<{ locale: "es" | "en" }> }) {
   const lang = (await params).locale;
   const dictionary = (await getDictionary(lang, 'index'));
@@ -81,7 +86,7 @@ export default async function Index ({ params }: { params: Promise<{ locale: "es
             <strong>{dictionary.methodologySection.description2}</strong>
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
-            {movementArray.map((movement: any, index: number) => (
+            {(movementArray as Array<MovementInfo>).map((movement, index) => (  
               <div key={movement.title} className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
                 <div className="text-3xl font-bold mb-2">{index + 1}</div>
                 <h3 className="font-playfair text-xl font-semibold mb-2">{movement.title}</h3>

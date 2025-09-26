@@ -29,7 +29,30 @@ import { cn } from "@/lib/utils";
 
 interface NavigationProps {
   className?: string;
-  dict: any;
+  dict: {
+    h2: string
+    h3: string
+    home: string
+    metodology: string
+    history: string
+    cumbia: string
+    currulao: string
+    pasillo: string
+    joropo: string
+    work: string
+    galery: string
+    resume: string
+    resources: string
+    quote: string
+    footer: string
+  };
+}
+
+interface NavigationItems {
+  id: string;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  icon: any;
+  href: string;
 }
 
 export function Navigation({ className, dict }: NavigationProps) {
@@ -94,7 +117,7 @@ export function Navigation({ className, dict }: NavigationProps) {
             </div>
 
             <ul className="space-y-2">
-              {navigationItems.map((item) => (
+              {navigationItems.map((item: NavigationItems) => (
                 <li key={item.id}>
                   <Link
                     href={item.href}
@@ -107,7 +130,9 @@ export function Navigation({ className, dict }: NavigationProps) {
                     )}
                   >
                     <item.icon className="h-5 w-5 transition-transform group-hover:scale-110" />
-                    <span className="font-medium">{dict[item.id]}</span>
+                    <span className="font-medium">
+                      {dict[item.id as keyof typeof dict]}
+                    </span>
                   </Link>
                 </li>
               ))}

@@ -2,7 +2,34 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Badge } from '@/components/ui/badge';
 import { Clock, Music, Users, BookOpen, Award } from 'lucide-react';
 
-export function TimelineSection({ timelineDictionary: td }: { timelineDictionary: any }) {
+interface TimelineSectionDictionary {
+  title: string
+  description: string
+  events: {
+    colonial: {
+      period: string
+      title: string
+      description: string
+    },
+    bandas: {
+      period: string
+      title: string
+      description: string
+    },
+    clasico: {
+      period: string
+      title: string
+      description: string
+    },
+    folclorico: {
+      period: string
+      title: string
+      description: string
+    }
+  }
+}
+
+export function TimelineSection({ timelineDictionary: td }: { timelineDictionary: TimelineSectionDictionary }) {
   return (
     <section className="py-16 px-6">
       <div className="max-w-6xl mx-auto">
@@ -44,17 +71,17 @@ export function TimelineSection({ timelineDictionary: td }: { timelineDictionary
                       <div className="flex items-center gap-2 mb-2">
                         <Badge variant="secondary" className="text-xs">
                           <Clock className="mr-1 h-3 w-3" />
-                          {td.events[event.id].period}
+                          {td.events[event.id as keyof typeof td.events].period}
                         </Badge>
                       </div>
                       <CardTitle className="font-playfair text-xl">
-                        {td.events[event.id].title}
+                        {td.events[event.id as keyof typeof td.events].title}
                       </CardTitle>
                     </CardHeader>
                     
                     <CardContent>
                       <CardDescription className="text-base leading-relaxed">
-                      {td.events[event.id].description}
+                        {td.events[event.id as keyof typeof td.events].description}
                       </CardDescription>
                     </CardContent>
                   </Card>

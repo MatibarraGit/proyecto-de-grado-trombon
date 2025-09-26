@@ -6,4 +6,5 @@ const dictionaries = {
 };
 
 export const getDictionary = async (locale: 'en' | 'es', module: string) =>
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   dictionaries[locale](module) as Promise<Record<string, any>> ?? {};
