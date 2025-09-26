@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_media_data_video_urls",
+  "info": {
+    "displayName": "videoUrl",
+    "icon": "play"
+  },
+  "options": {},
+  "attributes": {
+    "url": {
+      "type": "string",
+      "required": true
+    },
+    "videoId": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "config": {}
+}

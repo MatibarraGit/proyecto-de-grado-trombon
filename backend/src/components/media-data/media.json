@@ -1,0 +1,68 @@
+{
+  "collectionName": "components_media_data_media",
+  "info": {
+    "displayName": "Media",
+    "icon": "picture"
+  },
+  "options": {},
+  "attributes": {
+    "isYoutubeVideo": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    },
+    "file": {
+      "type": "media",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "isYoutubeVideo"
+            },
+            false
+          ]
+        }
+      },
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ]
+    },
+    "youtubeVideoId": {
+      "type": "string",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "isYoutubeVideo"
+            },
+            true
+          ]
+        }
+      },
+      "required": true
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "category": {
+      "type": "string"
+    },
+    "date": {
+      "type": "date"
+    },
+    "size": {
+      "type": "enumeration",
+      "enum": [
+        "small",
+        "medium",
+        "large"
+      ]
+    }
+  },
+  "config": {}
+}
