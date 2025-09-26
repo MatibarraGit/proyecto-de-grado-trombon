@@ -65,7 +65,10 @@ export function Navigation({ className, dict }: NavigationProps) {
       <Button
         variant="outline"
         size="icon"
-        className="fixed top-4 left-4 z-50 md:hidden bg-background/90 backdrop-blur-sm"
+        className={cn(
+          "fixed top-4 left-4 z-50 md:hidden bg-background/90 backdrop-blur-sm transition-all duration-300",
+          isOpen ? "translate-x-56" : "translate-x-0"
+        )}
         onClick={toggleNavigation}
       >
         {isOpen ? <X className="h-4 w-4" /> : <Menu className="h-4 w-4" />}

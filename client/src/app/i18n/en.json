@@ -19,89 +19,86 @@
 
   "index": {
     "heroSection": {
-      "title": "El Trombón en el Folclor Colombiano",
-      "description": "Destacar el aporte al repertorio del folclor colombiano",
-      "rhythmsButton": "Explorar Ritmos",
-      "sampleButton": "Explorar Muestra"
+      "title1": "The Trombone in the",
+      "title2": " Colombian Folklore",
+      "description": "Highlight the contribution to the Colombian folk repertoire",
+      "rhythmsButton": "Explore Rhythms",
+      "sampleButton": "Explore Sample"
     },
 
     "timelineSection": {
-      "title": "Historia del Trombón en Colombia",
-      "description": "Un recorrido por los momentos clave que definieron la presencia del trombón en nuestra música tradicional",
-      "events": [
-        {
-          "id": "colonial",
-          "period": "Época Colonial",
-          "title": "Influencias Europeas",
-          "description": "Llegada de instrumentos de viento europeos y primeras adaptaciones en el territorio colombiano. Los conquistadores traen tradiciones musicales que se mezclan con las indígenas."
+      "title": "History of the Trombone in Colombia",
+      "description": "A tour through the key moments that defined the presence of the trombone in our traditional music",
+      "events": {
+        "colonial": {
+          "period": "Colonial Era",
+          "title": "European Influences",
+          "description": "Arrival of European wind instruments and musical traditions that blended with the indigenous cultures"
         },
-        {
-          "id": "bandas",
-          "period": "Siglo XIX",
-          "title": "Ritmos Tradicionales",
-          "description": "Empiezan a proliferar los ritmos como la cumbia y currulao en la costa atlántica y pacífica, el bambuco y pasillo en la región andina, y el joropo en la Orinoquía."
+        "bandas": {
+          "period": "19th Century",
+          "title": "Traditional Rhythms",
+          "description": "Rhythms such as cumbia and currulao begin to proliferate on the Pacific Coast, as well as bambuco and pasillo in the Andean region, and joropo in Orinoquía"
         },
-        {
-          "id": "clasico",
-          "period": "Siglo XX Temprano",
-          "title": "Aportes Clásicos",
-          "description": "El trombón gana protagonismo en la música clásica y contemporánea: Beethoven, Berlioz y Britten lo utilizan de manera expresiva en sus obras."
+        "clasico": {
+          "period": "Early 20th Century",
+          "title": "Classical Contributions",
+          "description": "The trombone gains prominence in classical music; composers like Berlioz and Britten use it expressively in their works"
         },
-        {
-          "id": "folclorico",
-          "period": "Siglo XX-XXI",
-          "title": "Integración Folclórica",
-          "description": "En Colombia, aunque el trombón no es tradicionalmente protagonista en los ritmos patrimoniales, ha comenzado a tener mayor presencia en agrupaciones modernas, bandas sinfónicas y fusiones contemporáneas."
+        "folclorico": {
+          "period": "20th-21st Century",
+          "title": "Folkloric Integration",
+          "description": "In Colombia, although the trombone has not traditionally been a leading instrument in heritage rhythms, it has begun to gain greater presence in modern ensembles, symphonic bands, and contemporary fusions."
         }
-      ]
+      }
     },
 
     "rhythmsSection": {
-      "title": "Ritmos y Regiones",
-      "description": "Explora cómo el trombón se ha integrado en los diferentes géneros musicales tradicionales de Colombia",
+      "title": "Rhythms and Regions",
+      "description": "Explore how the trombone has been integrated into the different traditional musical genres of Colombia",
       "rhythms": {
         "cumbia": {
           "title": "Cumbia",
-          "region": "Costa Atlántica",
-          "description": "Ritmo emblemático de la región atlántica, que nació fusionando elementos africanos, indígenas y españoles. El trombón aporta profundidad y carácter a esta expresión musical."
+          "region": "Atlantic Coast",
+          "description": "An emblematic rhythm of the Atlantic region, born from the fusion of African, Indigenous, and Spanish elements. The trombone brings depth and character to this musical expression."
         },
         "currulao": {
           "title": "Currulao",
-          "region": "Costa Pacífica",
-          "description": "Expresión musical del litoral pacífico que combina ancestralidad africana con la sonoridad del trombón, creando un diálogo único entre tradición y modernidad."
+          "region": "Pacific Coast",
+          "description": "A musical expression of the Pacific coast that combines African ancestry with the sonority of the trombone, creating a unique dialogue between tradition and modernity."
         },
         "pasillo": {
-          "title": "Pasillo y Bambuco",
-          "region": "Región Andina",
-          "description": "Géneros representativos de la región andina colombiana donde el trombón ha encontrado un espacio especial para expresar la melancolía y alegría de nuestra montaña."
+          "title": "Pasillo and Bambuco",
+          "region": "Andean Region",
+          "description": "Representative genres of the Colombian Andes where the trombone has found a special place to express both the melancholy and the joy of our mountains."
         },
         "joropo": {
           "title": "Joropo",
           "region": "Orinoquía",
-          "description": "Música llanera que con la incorporación del trombón ha ganado nuevas dimensiones sonoras, manteniendo la esencia del trabajo y la vida en los llanos orientales."
+          "description": "Plains music that, with the incorporation of the trombone, has gained new sound dimensions while preserving the essence of work and life in the eastern plains."
         }
       }
     },
 
     "methodologySection": {
-      "title": "Elaboración de la Obra",
-      "description1": "Una suite en tres movimientos que representa el viaje musical del trombón en Colombia:",
-      "description2": " Confusión, Conciencia y Renacer",
+      "title": "Creation of the Work",
+      "description1": "A suite in three movements that represents the musical journey of the trombone in Colombia:",
+      "description2": " Confusion, Consciousness, and Rebirth",
       "movements": {
         "confusion": {
           "number": "1",
-          "title": "Confusión",
-          "description": "La búsqueda de identidad musical en un contexto globalizado"
+          "title": "Confusion",
+          "description": "The search for musical identity in a globalized context"
         },
         "consciousness": {
           "number": "2",
-          "title": "Conciencia",
-          "description": "El descubrimiento de las raíces y tradiciones propias"
+          "title": "Consciousness",
+          "description": "The discovery of one's own roots and traditions"
         },
         "rebirth": {
           "number": "3",
-          "title": "Renacer",
-          "description": "La síntesis creativa entre tradición y modernidad"
+          "title": "Rebirth",
+          "description": "The creative synthesis between tradition and modernity"
         }
       }
     }

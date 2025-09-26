@@ -61,6 +61,7 @@ export default async function Index ({ params }: { params: Promise<{ locale: "es
                     description={rhythmData.description}
                     href={rhythmData.href}
                     colorScheme={colorScheme}
+                    lang={lang}
                   />
                 </div>
               );
@@ -80,7 +81,7 @@ export default async function Index ({ params }: { params: Promise<{ locale: "es
             <strong>{dictionary.methodologySection.description2}</strong>
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
-            {movementArray.map((movement, index) => (
+            {movementArray.map((movement: any, index: number) => (
               <div key={movement.title} className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
                 <div className="text-3xl font-bold mb-2">{index + 1}</div>
                 <h3 className="font-playfair text-xl font-semibold mb-2">{movement.title}</h3>

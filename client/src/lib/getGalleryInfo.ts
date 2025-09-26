@@ -4,8 +4,8 @@ import { GalleryItem } from "@/types";
 import { formatDate } from "./utils";
 const { STRAPI_HOST } = process.env;
 
-export async function getGalleryInfo() {
-  const response = await query("gallery?populate[mediaFiles][on][media-data.media][populate][file][fields][0]=url&populate[mediaFiles][on][media-data.media][populate][file][fields][1]=publishedAt");
+export async function getGalleryInfo({ locale = "es" }: { locale: 'es' | 'en' }) {
+  const response = await query(`gallery?locale=${locale}&populate[mediaFiles][on][media-data.media][populate][file][fields][0]=url&populate[mediaFiles][on][media-data.media][populate][file][fields][1]=publishedAt`);
 
   const { data } = response;
   

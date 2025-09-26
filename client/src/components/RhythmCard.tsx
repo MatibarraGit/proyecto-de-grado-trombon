@@ -10,6 +10,7 @@ interface RhythmCardProps {
   description: string;
   colorScheme: 'primary' | 'secondary' | 'accent' | 'colombia-green';
   href: string;
+  lang: 'es' | 'en';
   image?: string;
   className?: string;
 }
@@ -34,6 +35,7 @@ export function RhythmCard({
   description, 
   colorScheme, 
   href,
+  lang,
   image, 
   className,
 }: RhythmCardProps) {
@@ -85,7 +87,7 @@ export function RhythmCard({
             href={href}
           >
             <Music className="mr-2 h-4 w-4" color='white' />
-            Explorar
+            {lang === 'es' ? 'Explorar' : 'Explore'}
           </Button>
         </div>
       </CardContent>

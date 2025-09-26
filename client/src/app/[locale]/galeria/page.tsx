@@ -11,10 +11,14 @@ import { Dialog, DialogContent, DialogTrigger, DialogTitle } from '@/components/
 import { useFetchData } from '@/hooks';
 import { getGalleryInfo } from '@/lib/getGalleryInfo';
 import { GalleryItem } from '@/types'; 
+import { useParams } from 'next/navigation';
 
 export default function Galeria() {
   const [selectedCategory, setSelectedCategory] = useState('Todos');
-  const { data, isLoading } = useFetchData({ fetchFunction: getGalleryInfo });
+  const params = useParams();
+  const locale = params.locale as 'es' | 'en';
+  
+  const { data, isLoading } = useFetchData({ fetchFunction: () => getGalleryInfo({ locale }) });
 
   if (isLoading) return <div>Loading...</div>;
 
