@@ -27,8 +27,15 @@ export async function middleware(request: NextRequest) {
   );
   
   if (pathnameHasLocale) {
-    // Si ya tiene locale, permitir que continúe
-    return NextResponse.next();
+    // Si ya tiene locale, permitir que continúe pero con headers de cache apropiados
+    const response = NextResponse.next();
+    
+    // Agregar headers para evitar cache cuando hay cambio de idioma
+    response.headers.set('Cache-Control', 'no-cache, no-store, must-revalidate');
+    response.headers.set('Pragma', 'no-cache');
+    response.headers.set('Expires', '0');
+    
+    return response;
   }
   
   // Extraer el locale del referer (URL anterior) si existe
@@ -53,7 +60,14 @@ export async function middleware(request: NextRequest) {
   const newUrl = new URL(request.url);
   newUrl.pathname = `/${currentLocale}${pathname}`;
   
-  return NextResponse.redirect(newUrl);
+  const response = NextResponse.redirect(newUrl);
+  
+  // Agregar headers para evitar cache en redirecciones
+  response.headers.set('Cache-Control', 'no-cache, no-store, must-revalidate');
+  response.headers.set('Pragma', 'no-cache');
+  response.headers.set('Expires', '0');
+  
+  return response;
 }
 
 export const config = {

@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { useRouter, usePathname } from "next/navigation";
+import { usePathname } from "next/navigation";
 import Link from "next/link";
 
 import {
@@ -58,7 +58,6 @@ interface NavigationItems {
 export function Navigation({ className, dict }: NavigationProps) {
   const [isOpen, setIsOpen] = useState(false);
 
-  const router = useRouter();
   const path = usePathname();
   
   const toggleNavigation = () => setIsOpen(!isOpen);
@@ -79,7 +78,12 @@ export function Navigation({ className, dict }: NavigationProps) {
     if (language === pathLocale) return
 
     const pathWithoutLocale = path.replace(/^\/[a-z]{2}\/?/, "");
-    router.replace(`/${language}/${pathWithoutLocale}`);
+    
+    // Forzar recarga completa para evitar cache
+    const newUrl = `/${language}/${pathWithoutLocale}`;
+    
+    // Usar window.location para forzar una recarga completa
+    window.location.href = newUrl;
   }
 
   return (
