@@ -23,7 +23,7 @@ export default function Galeria() {
   if (isLoading) return <div>Loading...</div>;
 
   const { title, description, mediaData } = data
-  const categories = Array.from(new Set(mediaData.map((item: GalleryItem) => item.category)));
+  const categories = Array.from(new Set(mediaData.map((item: GalleryItem) => item.category).filter((category: string) => category != null))); 
   categories.unshift("Todos");
 
   const filteredMediaData = selectedCategory === 'Todos' 

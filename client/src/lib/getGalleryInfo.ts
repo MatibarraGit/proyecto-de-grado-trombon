@@ -2,7 +2,7 @@
 import { query } from "@/lib";
 import { GalleryItem } from "@/types";
 import { formatDate } from "./utils";
-const { STRAPI_HOST } = process.env;
+const { IMAGE_HOSTNAME } = process.env;
 
 export async function getGalleryInfo({ locale = "es" }: { locale: 'es' | 'en' }) {
   const response = await query(`gallery?locale=${locale}&populate[mediaFiles][on][media-data.media][populate][file][fields][0]=url&populate[mediaFiles][on][media-data.media][populate][file][fields][1]=publishedAt`);
@@ -20,7 +20,7 @@ export async function getGalleryInfo({ locale = "es" }: { locale: 'es' | 'en' })
     isYoutubeVideo: data.isYoutubeVideo,
     file: data?.file ? {
       id: data.file.id,
-      url: `${STRAPI_HOST}${data.file.url}`,
+      url: `${IMAGE_HOSTNAME}${data.file.url}`,
       publishedAt: formatDate(data.file.publishedAt),
     } : undefined,
     youtubeVideoId: data?.youtubeVideoId,
