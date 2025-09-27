@@ -2,7 +2,8 @@ import { Target } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { getDictionary } from '@/app/i18n/dictionary';
 
-const Metodologia = async ({ params: { locale } }: { params: { locale: string } }) => {
+const Metodologia = async ({ params }: { params: Promise<{ locale: string }> }) => {
+  const { locale } = await params;
   const dict = await getDictionary(locale as 'en' | 'es', 'metodology');
 
   return (

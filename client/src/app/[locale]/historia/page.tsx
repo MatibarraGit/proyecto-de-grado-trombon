@@ -4,7 +4,8 @@ import { Badge } from '@/components/ui/badge';
 import { historiaData } from '@/data/historiaData';
 import { getDictionary } from '@/app/i18n/dictionary';
 
-const Historia = async ({ params: { locale } }: { params: { locale: string } }) => {
+const Historia = async ({ params }: { params: Promise<{ locale: string }> }) => {
+  const { locale } = await params;
   const dict = await getDictionary(locale as 'en' | 'es', 'history');
   const { introduction, introduction2, timelineEvents, trombonColombia } = historiaData;
   

@@ -1,7 +1,8 @@
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { getDictionary } from '@/app/i18n/dictionary';
 
-const Currulao = async ({ params: { locale } }: { params: { locale: string } }) => {
+const Currulao = async ({ params }: { params: Promise<{ locale: string }> }) => {
+  const { locale } = await params;
   const dict = await getDictionary(locale as 'en' | 'es', 'currulao');
 
   return (

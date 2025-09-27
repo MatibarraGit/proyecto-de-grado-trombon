@@ -1,7 +1,8 @@
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { getDictionary } from '@/app/i18n/dictionary';
 
-const Joropo = async ({ params: { locale } }: { params: { locale: string } }) => {
+const Joropo = async ({ params }: { params: Promise<{ locale: string }> }) => {
+  const { locale } = await params;
   const dict = await getDictionary(locale as 'en' | 'es', 'joropo');
 
   return (

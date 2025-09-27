@@ -6,7 +6,8 @@ import { BookOpen, ExternalLink, FileText, Globe, GraduationCap, Newspaper } fro
 import { referencesData } from '@/data/referencesData';
 import { getDictionary } from '@/app/i18n/dictionary';
 
-const Recursos = async ({ params: { locale } }: { params: { locale: string } }) => {
+const Recursos = async ({ params }: { params: Promise<{ locale: string }> }) => {
+  const { locale } = await params;
   const dict = await getDictionary(locale as 'en' | 'es', 'resources');
 
   // Función para obtener el icono según el tipo

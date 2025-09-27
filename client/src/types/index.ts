@@ -1,1 +1,1 @@
-export { type GalleryItem } from './GalleryItem.interface';
+export { type GalleryItem } from './galleryItem.interface';

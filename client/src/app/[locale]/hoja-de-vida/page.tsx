@@ -20,7 +20,8 @@ export const metadata: Metadata = {
   },
 };
 
-const HojaDeVida = async ({ params: { locale } }: { params: { locale: string } }) => {
+const HojaDeVida = async ({ params }: { params: Promise<{ locale: string }> }) => {
+  const { locale } = await params;
   const dict = await getDictionary(locale as 'en' | 'es', 'hojaDeVida');
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
   const pageUrl = new URL("/hoja-de-vida", siteUrl).toString();

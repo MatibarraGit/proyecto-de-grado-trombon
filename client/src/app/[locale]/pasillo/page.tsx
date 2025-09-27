@@ -2,7 +2,8 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { ComparisonTable } from '@/components/ComparisonTable';
 import { getDictionary } from '@/app/i18n/dictionary';
 
-const Pasillo = async ({ params: { locale } }: { params: { locale: string } }) => {
+const Pasillo = async ({ params }: { params: Promise<{ locale: string }> }) => {
+  const { locale } = await params;
   const dict = await getDictionary(locale as 'en' | 'es', 'pasillo');
 
   return (

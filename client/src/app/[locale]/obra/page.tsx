@@ -14,7 +14,8 @@ interface Movements {
   scoreButton: string
 }
 
-const Obra = async ({ params: { locale } }: { params: { locale: string } }) => {
+const Obra = async ({ params }: { params: Promise<{ locale: string }> }) => {
+  const { locale } = await params;
   const dict = await getDictionary(locale as 'en' | 'es', 'work');
   const movements = Object.values(dict.movements)
 

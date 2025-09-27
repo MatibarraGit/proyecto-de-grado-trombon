@@ -5,6 +5,24 @@ import "./globals.css";
 import { Navigation } from "@/components/Navigation";
 import { getDictionary } from "../i18n/dictionary";
 
+interface SidebarProps {
+  h2: string;
+  h3: string;
+  home: string;
+  metodology: string;
+  history: string;
+  cumbia: string;
+  currulao: string;
+  pasillo: string;
+  joropo: string;
+  work: string;
+  galery: string;
+  resume: string;
+  resources: string;
+  quote: string;
+  footer: string;
+};
+
 const playfair = Playfair_Display({
   subsets: ['latin'],
   weight: ['400', '500', '600', '700'],
@@ -39,10 +57,10 @@ export default async function RootLayout({
   params
 }: Readonly<{
   children: React.ReactNode;
-  params: { locale: "es" | "en" };
+  params: Promise<{ locale: "es" | "en" }>;
 }>) {
-  const lang = (await params).locale;
-  const dictionary = (await getDictionary(lang, 'sidebar'));
+  const { locale: lang } = await params;
+  const dictionary = await getDictionary(lang, 'sidebar') as SidebarProps;
   return (
     <html lang={lang}>
       <body className={`antialiased ${playfair.className} ${openSans.className}`}>
