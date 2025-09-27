@@ -152,7 +152,7 @@ export default function Galeria() {
                 
                 <DialogContent 
                   className="max-w-4xl max-h-[90vh] p-0" 
-                  closeButtonClassNames="h-6 w-6 flex items-center justify-center rounded-xl bg-muted border border-border hover:bg-accent hover:text-accent-foreground transition-all duration-200 disabled:pointer-events-none"
+                  closeButtonClassNames="h-6 w-6 flex items-center justify-center rounded-xl bg-muted border border-border hover:bg-accent hover:text-accent-foreground transition-all duration-200"
                   onOpenAutoFocus={(e) => e.preventDefault()}
                 >
                   <div className="relative">
