@@ -20,6 +20,11 @@ const nextConfig: NextConfig = {
         hostname: 'img.youtube.com',
         pathname: '/vi/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'ancient-ball-c23a4b56fe.media.strapiapp.com',
+        pathname: '/**',
+      },
     ],
   },
   // Configuración para manejar cache con internacionalización

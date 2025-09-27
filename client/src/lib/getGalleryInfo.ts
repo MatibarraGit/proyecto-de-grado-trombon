@@ -12,7 +12,18 @@ export async function getGalleryInfo({ locale = "es" }: { locale: 'es' | 'en' })
   // Separar los archivos de data
   const mediaData = data?.mediaFiles || [];
 
+  // Ordenar los archivos de data por fecha de publicación
   // mediaData.sort((a: GalleryItem, b: GalleryItem) => new Date(b.file.publishedAt).getTime() - new Date(a.file.publishedAt).getTime()); 
+
+  function normalizeMediaUrl(url: string | null) {
+    if (!url) return null;
+    // Si la URL ya es absoluta, la devolvemos tal cual
+    if (url.startsWith("http")) {
+      return url;
+    }
+    // Si es relativa, le agregamos el dominio de Strapi
+    return `${IMAGE_HOSTNAME}${url}`;
+  }
   
   // Mapear los archivos y modificar sus URLs y sus fechas
   const processedData = mediaData.map((data: GalleryItem) => ({
@@ -20,7 +31,7 @@ export async function getGalleryInfo({ locale = "es" }: { locale: 'es' | 'en' })
     isYoutubeVideo: data.isYoutubeVideo,
     file: data?.file ? {
       id: data.file.id,
-      url: `${IMAGE_HOSTNAME}${data.file.url}`,
+      url: normalizeMediaUrl(data.file.url),
       publishedAt: formatDate(data.file.publishedAt),
     } : undefined,
     youtubeVideoId: data?.youtubeVideoId,
