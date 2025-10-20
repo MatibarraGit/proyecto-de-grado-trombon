@@ -15,6 +15,7 @@ export function useFetchData<T>({ fetchFunction, initialData = null as T | null 
       setData(result);
       return result;
     } catch (err) {
+      console.log(err);
       setError(err);
       return null;
     } finally {
