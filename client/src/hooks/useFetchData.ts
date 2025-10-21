@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react"
+import { useEffect, useState, useCallback } from "react"
 
 type Fetcher<T> = () => Promise<T>;
 
@@ -9,7 +9,7 @@ export function useFetchData<T>({ fetchFunction, initialData = null as T | null 
   const [isLoading, setIsLoading] = useState<boolean>(!initialData);
   const [error, setError] = useState<unknown>(null);
 
-  async function fetchData(): Promise<T | null> {
+  const fetchData = useCallback(async (): Promise<T | null> => {
     setIsLoading(true);
     try {
       const result = await fetchFunction();
@@ -22,11 +22,11 @@ export function useFetchData<T>({ fetchFunction, initialData = null as T | null 
     } finally {
       setIsLoading(false);
     }
-  }
+  }, [fetchFunction]);
 
   useEffect(() => {
     fetchData();
-  }, []);
+  }, [fetchData]);
 
   return { data, setData, isLoading, error, fetchData };
 }
