@@ -2,13 +2,23 @@
 import { query } from "@/lib";
 import { GalleryItem } from "@/types";
 import { formatDate } from "./utils";
-const { IMAGE_HOSTNAME } = process.env;
+import { STRAPI_MEDIA_ORIGIN } from "./mediaHost";
 
 export async function getGalleryInfo({ locale = "es" }: { locale: 'es' | 'en' }) {
   const response = await query(`gallery?locale=${locale}&populate[mediaFiles][on][media-data.media][populate][file][fields][0]=url&populate[mediaFiles][on][media-data.media][populate][file][fields][1]=publishedAt`);
 
-  const { data } = response;
-  
+  if (response?.error) {
+    throw new Error(
+      `Strapi devolvio un error para la galeria (${locale}): ${response.error.message ?? 'sin detalle'}`
+    );
+  }
+
+  const { data } = response ?? {};
+
+  if (!data) {
+    throw new Error(`La galeria (${locale}) llego vacia desde Strapi.`);
+  }
+
   // Separar los archivos de data
   const mediaData = data?.mediaFiles || [];
 
@@ -22,7 +32,7 @@ export async function getGalleryInfo({ locale = "es" }: { locale: 'es' | 'en' })
       return url;
     }
     // Si es relativa, le agregamos el dominio de Strapi
-    return `${IMAGE_HOSTNAME}${url}`;
+    return `${STRAPI_MEDIA_ORIGIN}${url}`;
   }
   
   // Mapear los archivos y modificar sus URLs y sus fechas
@@ -42,9 +52,7 @@ export async function getGalleryInfo({ locale = "es" }: { locale: 'es' | 'en' })
   }));
 
   // Reemplazar las imágenes en data con las procesadas
-  if (data) {
-    data.mediaData = processedData;
-  }
+  data.mediaData = processedData;
 
   return data;
 }

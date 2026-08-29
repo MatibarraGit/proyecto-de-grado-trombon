@@ -1,13 +1,12 @@
 import { MapPin } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { historiaData } from '@/data/historiaData';
+import type { HistoriaDictionary } from '@/types/historiaData';
 import { getDictionary } from '@/app/i18n/dictionary';
 
 const Historia = async ({ params }: { params: Promise<{ locale: string }> }) => {
   const { locale } = await params;
-  const dict = await getDictionary(locale as 'en' | 'es', 'history');
-  const { introduction, introduction2, timelineEvents, trombonColombia } = historiaData;
+  const dict = (await getDictionary(locale as 'en' | 'es', 'history')) as HistoriaDictionary;
   
   return (
     <main className="min-h-screen md:ml-72">
@@ -36,8 +35,9 @@ const Historia = async ({ params }: { params: Promise<{ locale: string }> }) => 
               <CardTitle className="font-playfair text-2xl">{dict.introduction.title}</CardTitle>
             </CardHeader>
             <CardContent className="text-lg leading-relaxed space-y-4">
-              <p>{introduction}</p>
-              <p>{introduction2}</p>
+              {dict.introduction.paragraphs.map((paragraph) => (
+                <p key={paragraph}>{paragraph}</p>
+              ))}
             </CardContent>
           </Card>
 
@@ -47,7 +47,7 @@ const Historia = async ({ params }: { params: Promise<{ locale: string }> }) => 
               <CardTitle className="font-playfair text-2xl">{dict.trombonColombia.title}</CardTitle>
             </CardHeader>
             <CardContent className="text-lg leading-relaxed space-y-4">
-              {trombonColombia.map((item) => (
+              {dict.trombonColombia.sections.map((item) => (
                 <div key={item.subtitle} className="flex flex-col gap-2">
                   <h4 className="font-semibold mb-2">{item.subtitle}</h4>
                   <p>{item.description}</p>
@@ -63,7 +63,7 @@ const Historia = async ({ params }: { params: Promise<{ locale: string }> }) => 
             </h2>
             
             <div className="space-y-8">
-              {timelineEvents.map((event, index) => (
+              {dict.timeline.events.map((event, index) => (
                 <Card key={index} className="relative ">
                   <div className="absolute left-0 top-6 w-1 h-16 bg-primary rounded-full" />
                   <CardHeader className="pl-8 pb-4">

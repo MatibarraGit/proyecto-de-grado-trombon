@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     template: "%s | El Trombón en el Folclor Colombiano",
   },
   description:
-    "Destacar el aporte al repertorio del folclor colombiano - Un proyecto sobre la riqueza del trombón en los ritmos tradicionales",
+    "Destacar el aporte del trombón al repertorio del folclor colombiano - Un proyecto sobre la riqueza del instrumento en los ritmos tradicionales",
   authors: [{ name: "Proyecto de Grado Musical - Web por Matías Ibarra" }],
   openGraph: {
     title: "El Trombón en el Folclor Colombiano",

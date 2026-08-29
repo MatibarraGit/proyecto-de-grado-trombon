@@ -13,7 +13,7 @@
     "gallery": "Gallery",
     "resume": "Resume",
     "resources": "Resources",
-    "quote": "Highlighting the contribution to the repertoire of Colombian folklore",
+    "quote": "Highlighting the trombone's contribution to the repertoire of Colombian folklore",
     "footer": "Musical Degree Project"
   },
 
@@ -21,7 +21,7 @@
     "heroSection": {
       "title1": "The Trombone in the",
       "title2": " Colombian Folklore",
-      "description": "Highlight the contribution to the Colombian folk repertoire",
+      "description": "Highlight the trombone's contribution to the Colombian folk repertoire",
       "rhythmsButton": "Explore Rhythms",
       "sampleButton": "Explore Sample"
     },
@@ -55,7 +55,7 @@
 
     "rhythmsSection": {
       "title": "Rhythms and Regions",
-      "description": "Explore how the trombone has been integrated into the different traditional musical genres of Colombia",
+      "description": "Explore how the trombone's has been integrated into the different traditional musical genres of Colombia",
       "rhythms": {
         "cumbia": {
           "title": "Cumbia",
@@ -115,7 +115,7 @@
         "subtitle": "General Objectives",
         "items": [
           {
-            "description": "Highlight the contribution of the trombone to the Colombian folklore repertoire through the creation of a work that will be a short suite for trombone and band composed of three contrasting movements which are:",
+            "description": "Highlight the trombon contribution to the Colombian folklore repertoire through the creation of a work that will be a short suite for trombone and band composed of three contrasting movements which are:",
             "movements": [
               "1 - Confusion (pasillo)",
               "2 - Consciousness (cumbia)",
@@ -140,20 +140,180 @@
     }
   },
 
+  "gallery": {
+    "error": {
+      "title": "We couldn't load the gallery",
+      "description": "The content server took too long to respond. We're retrying; if nothing shows up, try again in a few seconds.",
+      "retry": "Try again",
+      "retrying": "Retrying..."
+    }
+  },
+
   "history": {
     "heroSection": {
       "title": "History of the Trombone in Colombia",
       "description": "A journey from Europe to the heart of Colombian folklore"
     },
     "introduction": {
-      "title": "Introduction and Context"
+      "title": "Introduction and Context",
+      "paragraphs": [
+        "The trombone is a brass instrument that emerged at the end of the 15th century from the shape of the slide trumpet. It is the only instrument in that family capable of producing the entire range of the harmonic series and the natural glissando effect.",
+        "During the Baroque period the trombone was used in the context of religious music and in small ensembles. It joined the orchestra during Classicism, towards the end of the 18th century, initially in the theatre orchestra."
+      ]
     },
     "trombonColombia": {
-      "title": "The trombone within Colombian music"
+      "title": "The trombone within Colombian music",
+      "sections": [
+        {
+          "subtitle": "The trombone: an instrument with little prominence",
+          "description": "The trombone has had a secondary presence in traditional Colombian rhythms. Although it is part of some ensembles, its role has been one of accompaniment, without occupying a prominent place in the composition or performance of the country's most representative folk genres."
+        },
+        {
+          "subtitle": "A necessary historical journey",
+          "description": "To understand this situation, it is important to review the development of music in Colombia. From the ritual sounds of indigenous peoples to the consolidation of national genres, one can see how other instruments —such as the gaita, the drums, the strings or the guacharaca— have played a greater leading role."
+        },
+        {
+          "subtitle": "Colombian musical identity",
+          "description": "Colombia achieved a national musical identity through genres such as joropo, bambuco, pasillo, currulao, porro and cumbia, all born from processes of miscegenation and transculturation. These genres were influenced by African, European and indigenous instruments, which became part of local customs and shaped the country's soundscape."
+        },
+        {
+          "subtitle": "The influence of transculturation",
+          "description": "Colombian rhythms arise from cultural confluences: the indigenous heritage; the Iberian colonization; the African slave trade; and the influence of Western European culture. These influences combined in different ways depending on the region, which explains the great variety of styles and instruments in the country. Instruments such as the trombone arrived from Europe, but in many cases they did not manage to adapt to the style or structure of traditional local rhythms."
+        },
+        {
+          "subtitle": "Folklore as an expression of memory and miscegenation",
+          "description": "Colombian music, as Rubén Pardo states, is a form of collective memory: it recalls key moments of national history and celebrates its diverse roots. Fabio Betancur adds that Colombian musical miscegenation has African and Spanish contributions as its \"common clay\". In turn, Jomi García highlights that genres such as cumbia and porro are hybrid expressions, impossible to classify solely as Indo-American or Afro-American."
+        },
+        {
+          "subtitle": "Contribution and future of the trombone",
+          "description": "Although historically the trombone has not been central to traditional Colombian music, its inclusion in symphonic bands, contemporary ensembles and academic compositions represents an opportunity to expand the Colombian folk repertoire and give it new sonic nuances."
+        }
+      ]
     },
     "timeline": {
-      "title": "Detailed Timeline"
-    }
+      "title": "Detailed Timeline",
+      "events": [
+        {
+          "time": "Late 15th Century",
+          "title": "European Origins of the Trombone",
+          "description": "The trombone emerges (an evolved slide trumpet). It is known as \"sackbut\" (England), \"sacabuche\" (Spain), among others. It is the only brass instrument capable of producing natural glissandos.",
+          "category": "Origin",
+          "region": "Europe"
+        },
+        {
+          "time": "Before the 16th century",
+          "title": "Pre-Columbian era",
+          "description": "The indigenous peoples of Colombia already use music with social and religious functions.",
+          "category": "Indigenous culture",
+          "region": "Colombia"
+        },
+        {
+          "time": "16th Century",
+          "title": "Arrival in the Americas",
+          "description": "The trombone reaches the American continent through Spanish colonial expeditions and religious missions. Cultural miscegenation between indigenous, African and European peoples begins. Colombian folklore starts to take shape from this mixture.",
+          "category": "Colonization",
+          "region": "America"
+        },
+        {
+          "time": "17th - 18th Century",
+          "title": "Incorporation of the Trombone",
+          "description": "The trombone is used in religious music and small ensembles during the Baroque period. It becomes part of the theatre orchestra during Classicism, towards the end of the 18th century.",
+          "category": "Adaptation",
+          "region": "Colombia"
+        },
+        {
+          "time": "19th Century",
+          "title": "Traditional Colombian rhythms",
+          "description": "Rhythms such as cumbia and currulao on the Atlantic and Pacific coasts, bambuco and pasillo in the Andean region, and joropo in the Orinoquía begin to flourish.",
+          "category": "Development",
+          "region": "Regions"
+        },
+        {
+          "time": "Mid-19th century",
+          "title": "Difficulties with the Trombone",
+          "description": "Despite making fast passages easier, valve trombones fall out of use because of tuning problems. The slide trombone is taken up again, becoming established in the orchestra as the reference instrument (2 tenors and 1 bass).",
+          "category": "Return",
+          "region": "National"
+        },
+        {
+          "time": "19th - 20th Century",
+          "title": "Consolidation",
+          "description": "Colombian rhythms are already clearly differentiated by region. Local instruments such as drums, guacharaca, harp, cuatro and capachos dominate each style. The slide trombone remains the standard thanks to its better sonority and accuracy.",
+          "category": "Settlement",
+          "region": "National"
+        },
+        {
+          "time": "Mid-20th century",
+          "title": "Expansion and Recognition",
+          "description": "The valve trombone is still used in popular bands and orchestras in Latin America and other countries, but the slide trombone predominates. The trombone gains prominence in classical and contemporary music: Beethoven, Berlioz and Britten use it expressively in their works.",
+          "category": "Classicism",
+          "region": "International"
+        },
+        {
+          "time": "Contemporary Era",
+          "title": "The trombone today",
+          "description": "The trombone is a versatile and expressive instrument, with advances in manufacturing and design. There are soprano, alto, tenor, tenor-bass, bass and contrabass trombones. The tenor is the most common one for learning and general use. In Colombia, although the trombone is not traditionally a leading instrument in heritage rhythms, it has begun to have a greater presence in modern ensembles, symphonic bands and contemporary fusions.",
+          "category": "Modernity",
+          "region": "International"
+        }
+      ]
+    },
+    "notableFigures": [
+      {
+        "name": "Lucho Bermúdez",
+        "role": "Composer and Conductor",
+        "contribution": "A pioneer in incorporating the trombone into cumbia and porro. His arrangements established patterns that endure to this day.",
+        "period": "1912-1994",
+        "region": "Atlantic Coast"
+      },
+      {
+        "name": "Pacho Galán",
+        "role": "Composer",
+        "contribution": "Creator of merecumbé, a genre that used the trombone as the main melodic instrument in folk compositions.",
+        "period": "1906-1988",
+        "region": "Atlantic Coast"
+      },
+      {
+        "name": "Blas Emilio Atehortúa",
+        "role": "Academic Composer",
+        "contribution": "Antioquian composer who wrote works for trombone based on Colombian rhythms, especially bambucos and pasillos.",
+        "period": "1933-2020",
+        "region": "Andean Region"
+      },
+      {
+        "name": "Francisco Zumaqué",
+        "role": "Popular Composer",
+        "contribution": "His trombone compositions in cumbias and porros influenced generations of folk trombonists.",
+        "period": "1920-1990",
+        "region": "Atlantic Coast"
+      }
+    ],
+    "culturalAreas": [
+      {
+        "region": "Atlantic Coast",
+        "description": "The trombone was integrated into cumbia and porro through the pelayera bands. Its deep sonority complements the gaitas and the accordion.",
+        "characteristics": ["Pelayera bands", "Porro sabanero", "Modern cumbia", "Urban mapalé"],
+        "period": "1920-present"
+      },
+      {
+        "region": "Pacific Coast",
+        "description": "Adoption of the trombone in currulao and the chirimía from Chocó. A unique fusion of African ancestry and instrumental modernity.",
+        "characteristics": ["Contemporary currulao", "Modern chirimía", "Urban abozao", "Present-day bundes"],
+        "period": "1960-present"
+      },
+      {
+        "region": "Andean Region",
+        "description": "The trombone found its place in pasillos and bambucos through estudiantinas and conservatories. A melancholic and festive expression.",
+        "characteristics": ["Nostalgic pasillo", "Festive bambuco", "Modern torbellino", "Present-day guabina"],
+        "period": "1890-present"
+      },
+      {
+        "region": "Orinoquía",
+        "description": "Recent integration of the trombone into joropo. A technical adaptation to match the traditional speed of the cuatro and the bandola.",
+        "characteristics": ["Joropo recio", "Slow joropo", "Golpe llanero", "Modern pasaje"],
+        "period": "1980-present"
+      }
+    ]
   },
 
   "cumbia": {

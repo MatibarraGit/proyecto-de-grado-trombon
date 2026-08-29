@@ -3,5 +3,13 @@
   command = "pnpm build"
   publish = ".next"
 
+[build.environment]
+  # El hostname del CDN de Strapi ya no es una env var: vive como constante en
+  # src/lib/mediaHost.ts porque es publico (va en el src de cada imagen).
+  # Esta excepcion solo hace falta mientras IMAGE_HOSTNAME siga existiendo como
+  # "secret env var" en el panel de Netlify; al borrarla de ahi, se puede borrar
+  # este bloque entero. STRAPI_TOKEN, que si es secreto, sigue escaneado.
+  SECRETS_SCAN_OMIT_KEYS = "IMAGE_HOSTNAME"
+
 [[plugins]]
   package = "@netlify/plugin-nextjs"

@@ -1,4 +1,5 @@
 import type { NextConfig } from "next";
+import { STRAPI_MEDIA_HOSTNAME } from "./src/lib/mediaHost";
 
 const nextConfig: NextConfig = {
   images: {
@@ -22,7 +23,7 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: 'https',
-        hostname: 'ancient-ball-c23a4b56fe.media.strapiapp.com',
+        hostname: STRAPI_MEDIA_HOSTNAME,
         pathname: '/**',
       },
     ],
