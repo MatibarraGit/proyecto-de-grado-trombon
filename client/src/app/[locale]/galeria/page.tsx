@@ -1,12 +1,10 @@
 import { getGalleryInfo } from '@/lib/getGalleryInfo';
 import GalleryClient from '../../../components/GalleryClient';
 
-interface Params {
-  params: Promise<{ locale: 'es' | 'en' }>
-}
-
-export default async function Galeria({ params }: Params) {
+const Galeria = async ({ params }: { params: Promise<{ locale: string }> }) => {
   const { locale } = await params;
-  const data = await getGalleryInfo({ locale });
+  const data = await getGalleryInfo({ locale: locale as 'en' | 'es' });
   return <GalleryClient data={data} />;
 }
+
+export default Galeria;
