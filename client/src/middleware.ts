@@ -26,16 +26,9 @@ export async function middleware(request: NextRequest) {
     (locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`
   );
   
+  // Si ya tiene locale, se sirve la página (estática) tal cual
   if (pathnameHasLocale) {
-    // Si ya tiene locale, permitir que continúe pero con headers de cache apropiados
-    const response = NextResponse.next();
-    
-    // Agregar headers para evitar cache cuando hay cambio de idioma
-    response.headers.set('Cache-Control', 'no-cache, no-store, must-revalidate');
-    response.headers.set('Pragma', 'no-cache');
-    response.headers.set('Expires', '0');
-    
-    return response;
+    return NextResponse.next();
   }
   
   // Extraer el locale del referer (URL anterior) si existe
@@ -60,13 +53,10 @@ export async function middleware(request: NextRequest) {
   const newUrl = new URL(request.url);
   newUrl.pathname = `/${currentLocale}${pathname}`;
   
+  // Las redirecciones por idioma dependen del request: no se cachean
   const response = NextResponse.redirect(newUrl);
-  
-  // Agregar headers para evitar cache en redirecciones
-  response.headers.set('Cache-Control', 'no-cache, no-store, must-revalidate');
-  response.headers.set('Pragma', 'no-cache');
-  response.headers.set('Expires', '0');
-  
+  response.headers.set('Cache-Control', 'no-store');
+
   return response;
 }
 

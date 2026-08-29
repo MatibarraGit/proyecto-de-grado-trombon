@@ -26,6 +26,7 @@ import {
 } from "./ui/select";
 
 import { cn } from "@/lib/utils";
+import { isRhythmId, rhythmBackground } from "@/lib/rhythmColors";
 
 interface NavigationProps {
   className?: string;
@@ -40,7 +41,7 @@ interface NavigationProps {
     pasillo: string
     joropo: string
     work: string
-    galery: string
+    gallery: string
     resume: string
     resources: string
     quote: string
@@ -129,7 +130,11 @@ export function Navigation({ className, dict }: NavigationProps) {
                     className={cn(
                       "flex items-center gap-3 px-4 py-3 rounded-lg transition-all duration-200 group",
                       isActiveRoute(item.href)
-                        ? "bg-primary text-gray-100 shadow-sm"
+                        ? cn(
+                            "text-gray-100 shadow-sm",
+                            // Los ritmos heredan el color del Hero de su propia pagina
+                            isRhythmId(item.id) ? rhythmBackground[item.id] : "bg-primary"
+                          )
                         : "text-muted-foreground hover:text-foreground hover:bg-muted/50"
                     )}
                   >
@@ -191,7 +196,7 @@ const navigationItems = [
   { id: "pasillo", icon: MapPin, href: "/pasillo" },
   { id: "joropo", icon: MapPin, href: "/joropo" },
   { id: "work", icon: Music4, href: "/obra" },
-  { id: "galery", icon: Images, href: "/galeria" },
+  { id: "gallery", icon: Images, href: "/galeria" },
   { id: "resume", icon: FileText, href: "/hoja-de-vida" },
   { id: "resources", icon: Download, href: "/recursos" },
 ];

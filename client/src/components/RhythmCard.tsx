@@ -3,30 +3,45 @@ import { MapPin, Music } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
+import type { RhythmColorScheme } from '@/types';
 
 interface RhythmCardProps {
   title: string;
   region: string;
   description: string;
-  colorScheme: 'primary' | 'secondary' | 'accent' | 'colombia-green';
+  colorScheme: RhythmColorScheme;
   href: string;
   lang: 'es' | 'en';
   image?: string;
   className?: string;
 }
 
-const colorVariants = {
-  primary: 'border-primary/20 hover:border-primary/40 hover:shadow-primary/10',
-  secondary: 'border-secondary/20 hover:border-secondary/40 hover:shadow-secondary/10',
-  accent: 'border-accent/20 hover:border-accent/40 hover:shadow-accent/10',
-  'colombia-green': 'border-colombia-green/20 hover:border-colombia-green/40 hover:shadow-colombia-green/10',
+const colorVariants: Record<RhythmColorScheme, string> = {
+  cumbia: 'border-cumbia/20 hover:border-cumbia/40 hover:shadow-cumbia/10',
+  currulao: 'border-currulao/20 hover:border-currulao/40 hover:shadow-currulao/10',
+  pasillo: 'border-pasillo/20 hover:border-pasillo/40 hover:shadow-pasillo/10',
+  joropo: 'border-joropo/20 hover:border-joropo/40 hover:shadow-joropo/10',
 };
 
-const iconColors = {
-  primary: 'text-primary',
-  secondary: 'text-secondary',
-  accent: 'text-accent',
-  'colombia-green': 'text-colombia-green',
+const iconColors: Record<RhythmColorScheme, string> = {
+  cumbia: 'text-cumbia',
+  currulao: 'text-currulao',
+  pasillo: 'text-pasillo',
+  joropo: 'text-joropo',
+};
+
+const titleHoverColors: Record<RhythmColorScheme, string> = {
+  cumbia: 'group-hover:text-cumbia',
+  currulao: 'group-hover:text-currulao',
+  pasillo: 'group-hover:text-pasillo',
+  joropo: 'group-hover:text-joropo',
+};
+
+const buttonColors: Record<RhythmColorScheme, string> = {
+  cumbia: 'bg-cumbia hover:bg-cumbia/90',
+  currulao: 'bg-currulao hover:bg-currulao/90',
+  pasillo: 'bg-pasillo hover:bg-pasillo/90',
+  joropo: 'bg-joropo hover:bg-joropo/90',
 };
 
 export function RhythmCard({ 
@@ -64,7 +79,7 @@ export function RhythmCard({
           </span>
         </div>
         
-        <CardTitle className="font-playfair text-xl group-hover:text-primary transition-colors">
+        <CardTitle className={cn("font-playfair text-xl transition-colors", titleHoverColors[colorScheme])}>
           {title}
         </CardTitle>
       </CardHeader>
@@ -79,10 +94,7 @@ export function RhythmCard({
             size="sm" 
             className={cn(
               "flex-1 transition-all duration-200 text-white",
-              colorScheme === 'primary' && "bg-primary hover:bg-primary/90",
-              colorScheme === 'secondary' && "bg-secondary hover:bg-secondary/90",
-              colorScheme === 'accent' && "bg-accent hover:bg-accent/90",
-              colorScheme === 'colombia-green' && "bg-colombia-green hover:bg-colombia-green/90"
+              buttonColors[colorScheme]
             )}
             href={href}
           >

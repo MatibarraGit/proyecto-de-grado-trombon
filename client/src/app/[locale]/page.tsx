@@ -3,13 +3,14 @@ import { HeroSection } from '@/components/HeroSection';
 import { TimelineSection } from '@/components/TimelineSection';
 import { RhythmCard } from '@/components/RhythmCard';
 
+import type { RhythmColorScheme } from '@/types';
+
 // Definir tipos para los ritmos
-type RhythmId = 'cumbia' | 'currulao' | 'pasillo' | 'joropo';
-type ColorScheme = 'primary' | 'secondary' | 'accent' | 'colombia-green';
+type RhythmId = RhythmColorScheme;
 
 interface Rhythm {
   id: RhythmId;
-  colorScheme: ColorScheme;
+  colorScheme: RhythmColorScheme;
 }
 
 interface RhythmData {
@@ -57,7 +58,7 @@ export default async function Index ({ params }: { params: Promise<{ locale: "es
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {rhythms.map((rhythm, index) => {
               const rhythmData = (rhythmsDictionary as RhythmsDictionary)[rhythm.id];
-              const colorScheme = rhythm.colorScheme as ColorScheme;
+              const colorScheme = rhythm.colorScheme;
               return (
                 <div key={index} className="animate-fade-up" style={{ animationDelay: `${index * 0.1}s` }}>
                   <RhythmCard 
@@ -105,18 +106,18 @@ export default async function Index ({ params }: { params: Promise<{ locale: "es
 const rhythms: Rhythm[] = [
   {
     id: 'cumbia',
-    colorScheme: 'primary',
+    colorScheme: 'cumbia',
   },
   {
     id: 'currulao',
-    colorScheme: 'secondary',
+    colorScheme: 'currulao',
   },
   {
     id: 'pasillo',
-    colorScheme: 'accent',
+    colorScheme: 'pasillo',
   },
   {
     id: 'joropo',
-    colorScheme: 'colombia-green',
+    colorScheme: 'joropo',
   },
 ];

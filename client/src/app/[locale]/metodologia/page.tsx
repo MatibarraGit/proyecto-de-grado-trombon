@@ -9,8 +9,8 @@ const Metodologia = async ({ params }: { params: Promise<{ locale: string }> }) 
   return (
     <main className="md:ml-72">
       {/* Hero Section */}
-      <section className="relative h-64 bg-gradient-accent text-white overflow-hidden">
-        <div className="absolute inset-0 bg-black/20" />
+      <section className="relative h-64 text-white overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-900 to-slate-700" />
         <div className="relative z-10 h-full flex items-center px-6">
           <div className="max-w-4xl mx-auto">
             <h1 className="font-playfair text-4xl md:text-5xl font-bold mb-4">

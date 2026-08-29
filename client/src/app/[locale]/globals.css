@@ -52,8 +52,13 @@ All colors MUST be HSL.
     --transition-musical: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-smooth: all 0.3s ease-out;
     
-    /* Colombian green for accents */
-    --colombia-green: 140 100% 30%;
+    /* Identidad de color por ritmo.
+       La cumbia tiene su propio tono (no usa --primary) para no confundirse
+       con el color de marca del sitio y quedar al mismo nivel que los demas ritmos. */
+    --cumbia: 354 100% 45%;
+    --currulao: 214 100% 30%;
+    --pasillo: 276 55% 45%;
+    --joropo: 140 100% 30%;
 
     --sidebar-background: 0 0% 98%;
 
@@ -100,6 +105,12 @@ All colors MUST be HSL.
     --border: 30 15% 20%;
     --input: 30 15% 20%;
     --ring: 45 85% 55%;
+
+    --cumbia: 354 80% 55%;
+    --currulao: 214 80% 45%;
+    --pasillo: 276 60% 58%;
+    --joropo: 140 70% 38%;
+
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;

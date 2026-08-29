@@ -1,5 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { getDictionary } from '@/app/i18n/dictionary';
+import { rhythmBackground } from '@/lib/rhythmColors';
 
 const Cumbia = async ({ params }: { params: Promise<{ locale: string }> }) => {
   const { locale } = await params;
@@ -8,8 +9,8 @@ const Cumbia = async ({ params }: { params: Promise<{ locale: string }> }) => {
   return (
     <main className="min-h-screen md:ml-72">
       {/* Hero Section */}
-      <section className="relative h-64 bg-gradient-primary text-white overflow-hidden">
-        <div className="absolute inset-0 bg-black/20" />
+      <section className="relative h-64 text-white overflow-hidden">
+        <div className={`absolute inset-0 ${rhythmBackground.cumbia}`} />
         <div className="relative z-10 h-full flex items-center px-6">
           <div className="max-w-4xl mx-auto">
             <h1 className="font-playfair text-4xl md:text-5xl font-bold mb-4">
@@ -37,7 +38,7 @@ const Cumbia = async ({ params }: { params: Promise<{ locale: string }> }) => {
               </p>
 
               
-              <blockquote className="border-l-4 border-primary pl-6 italic text-muted-foreground">
+              <blockquote className="border-l-4 border-cumbia pl-6 italic text-muted-foreground">
                 {`"${dict.historicalDescription.quote}"`}
               </blockquote>
             </CardContent>

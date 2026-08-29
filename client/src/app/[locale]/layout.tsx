@@ -16,7 +16,7 @@ interface SidebarProps {
   pasillo: string;
   joropo: string;
   work: string;
-  galery: string;
+  gallery: string;
   resume: string;
   resources: string;
   quote: string;
@@ -26,12 +26,14 @@ interface SidebarProps {
 const playfair = Playfair_Display({
   subsets: ['latin'],
   weight: ['400', '500', '600', '700'],
+  display: 'swap',
   variable: '--font-playfair',
 })
 
 const openSans = Open_Sans({
   subsets: ['latin'],
   weight: ['300', '400', '500', '600', '700'],
+  display: 'swap',
   variable: '--font-open-sans',
 })
 
@@ -51,6 +53,13 @@ export const metadata: Metadata = {
     url: "/",
   },
 };
+
+// Prerenderiza /es y /en en build-time y rechaza cualquier otro locale
+export function generateStaticParams() {
+  return [{ locale: "es" }, { locale: "en" }];
+}
+
+export const dynamicParams = false;
 
 export default async function RootLayout({
   children,

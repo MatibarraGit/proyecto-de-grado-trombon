@@ -20,10 +20,12 @@ export default {
     	extend: {
     		fontFamily: {
     			playfair: [
+    				'var(--font-playfair)',
     				'Playfair Display',
     				'serif'
     			],
     			sans: [
+    				'var(--font-open-sans)',
     				'Open Sans',
     				'sans-serif'
     			]
@@ -62,7 +64,10 @@ export default {
     				DEFAULT: 'hsl(var(--card))',
     				foreground: 'hsl(var(--card-foreground))'
     			},
-    			'colombia-green': 'hsl(var(--colombia-green))',
+    			cumbia: 'hsl(var(--cumbia))',
+    			currulao: 'hsl(var(--currulao))',
+    			pasillo: 'hsl(var(--pasillo))',
+    			joropo: 'hsl(var(--joropo))',
     			sidebar: {
     				DEFAULT: 'hsl(var(--sidebar-background))',
     				foreground: 'hsl(var(--sidebar-foreground))',
