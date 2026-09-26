@@ -42,7 +42,7 @@ export interface MediaDataVideoUrl extends Struct.ComponentSchema {
 }
 
 declare module '@strapi/strapi' {
-  export module Public {
+  export namespace Public {
     export interface ComponentSchemas {
       'images-data.img': ImagesDataImg;
       'media-data.media': MediaDataMedia;
