@@ -24,7 +24,7 @@ const nextConfig: NextConfig = {
       {
         protocol: 'https',
         hostname: STRAPI_MEDIA_HOSTNAME,
-        pathname: '/**',
+        pathname: '/db8b2c9gb/**', // Como estoy usando Cludinary, limito el permiso a mi cuenta mediante el path de la url
       },
     ],
   },

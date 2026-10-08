@@ -28,11 +28,11 @@ export async function getGalleryInfo({ locale = "es" }: { locale: 'es' | 'en' })
   function normalizeMediaUrl(url: string | null) {
     if (!url) return null;
 
-    // Si es en local, devolvemos con localhost
-    if (process.env.NODE_ENV === 'development') return `http://localhost:1337${url}`
     // Si la URL ya es absoluta, la devolvemos tal cual
     if (url.startsWith("http")) return url;
-    // Si es relativa, le agregamos el dominio de Strapi
+    // Si es en local, devolvemos con localhost
+    if (process.env.NODE_ENV === 'development') return `http://localhost:1337${url}`
+    // Si es relativa, le agregamos el dominio de la nube desde donde se sirven las imágenes
     return `${STRAPI_MEDIA_ORIGIN}${url}`;
   }
   
