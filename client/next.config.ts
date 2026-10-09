@@ -1,7 +1,8 @@
 import type { NextConfig } from "next";
-import { STRAPI_MEDIA_HOSTNAME } from "./src/lib/mediaHost";
 
 const nextConfig: NextConfig = {
+  // Para que la página de galería tenga tiempo de reintentar 3 veces el fetch a la api de Strapi con sus 60s por intento
+  staticPageGenerationTimeout: 190,
   images: {
     remotePatterns: [
       {
@@ -23,7 +24,7 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: 'https',
-        hostname: STRAPI_MEDIA_HOSTNAME,
+        hostname: 'res.cloudinary.com',
         pathname: '/db8b2c9gb/**', // Como estoy usando Cludinary, limito el permiso a mi cuenta mediante el path de la url
       },
     ],

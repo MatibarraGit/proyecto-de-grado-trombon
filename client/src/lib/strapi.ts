@@ -1,21 +1,26 @@
-"use server"
+import 'server-only'
 const { STRAPI_HOST, STRAPI_TOKEN } = process.env;
 
+const isBuild = process.env.NEXT_PHASE === 'phase-production-build';
 const MAX_ATTEMPTS = 3;
 const RETRY_BASE_DELAY_MS = 400;
-const REQUEST_TIMEOUT_MS = 10_000;
+const REQUEST_TIMEOUT_MS = isBuild ? 60_000 : 10_000;
 
 //  Error de Strapi que no tiene sentido reintentar (400, 401, 404...)
+//  la instancia esta despierta y respondio, pero la peticion es invalida.
 class PermanentQueryError extends Error {}
 const wait = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
 
 /**
  * Consulta la API de Strapi reintentando los fallos transitorios.
  *
- * El plan gratuito de Strapi suspende la instancia cuando no recibe trafico,
- * asi que la primera peticion despues de un rato puede fallar o cortar por
- * timeout mientras el servidor despierta. Con un par de reintentos con backoff
- * la segunda o tercera ya responde y el usuario no ve ningun error.
+ * Strapi esta desplegado en el plan gratuito de Render, que suspende la
+ * instancia cuando no recibe trafico. La primera peticion despues de un rato
+ * puede fallar (502/503) o cortar por timeout mientras Render despierta el
+ * servidor. Como el arranque sigue en marcha aunque la peticion se corte,
+ * basta con volver a ejecutar la consulta tras una espera con backoff
+ * exponencial: cuando Render ya esta despierto, el reintento responde bien y
+ * el usuario no ve ningun error.
  */
 export async function query(url: string) {
   if (!STRAPI_HOST) {
@@ -31,7 +36,7 @@ export async function query(url: string) {
           Authorization: `Bearer ${STRAPI_TOKEN}`,
         },
         method: 'GET',
-        cache: 'no-store',
+        cache: 'force-cache',
         signal: AbortSignal.timeout(REQUEST_TIMEOUT_MS),
       });
 
@@ -47,8 +52,10 @@ export async function query(url: string) {
 
       return await res.json();
     } catch (error) {
+      // Los errores permanentes no se reintentan: Render ya esta despierto.
       if (error instanceof PermanentQueryError) throw error;
 
+      // Fallo transitorio (timeout, error de red, 5xx, 429): probablemente render todavia esta despertando. Se espera y se vuelve a ejecutar.
       lastError = error;
       const isLastAttempt = attempt === MAX_ATTEMPTS;
       console.warn(
